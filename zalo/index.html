@@ -54,6 +54,11 @@
 .zl .feat p{margin:6px 0 0}
 .zl .sugg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .zl .cs-fig figcaption{text-align:center}
+.zl .lofi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px;align-items:stretch}
+.zl .lofi .cs-fig{margin:0;height:100%}
+.zl .lofi .frame{height:100%;aspect-ratio:16/11;display:flex;align-items:center;justify-content:center}
+.zl .lofi .frame img{width:100%;height:100%;object-fit:contain}
+@media (max-width:760px){.zl .lofi{grid-template-columns:1fr}}
 @media (max-width:760px){.zl .stats,.zl .two,.zl .aud,.zl .persona,.zl .hmws>div,.zl .flows,.zl .sugg{grid-template-columns:1fr}.zl .steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
@@ -194,7 +199,7 @@
 
   <section class="cs-sec">
     <div class="col"><div class="num">08 · Lo-fi</div><h2>Our first lo-fi wireframes</h2><p>A quick first pass to test the structure. Not detailed enough for usability testing, so we moved to hi-fi.</p></div>
-    <div class="cs-wide" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px;align-items:start">
+    <div class="cs-wide lofi">
       <figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-6ecae9612668d050cead3ee69c411e44473942ae/w=2400" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-29a37d91a9862ff198059af5c3126b3695cef79f/w=2400" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-c6d2cf1290d06cd60ee4aa88cbf5092fbafb4587/w=1988" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-29751f2f15def6eaec71f3dfd08aaafea071da5b/w=678" loading="lazy" alt="Lo-fi wireframe"></div></figure>
     </div>
   </section>
