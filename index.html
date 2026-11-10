@@ -78,6 +78,16 @@ a.thumb:hover{transform:translateY(-3px)}
 .go:hover{color:var(--accent)}
 .go.off{color:var(--muted);font-weight:400}
 
+/* Blogs */
+.blogs{padding-top:56px}
+.post{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}
+.post-body{display:grid;grid-template-columns:1fr 200px;gap:24px;align-items:start}
+.post h3{font-size:19px;font-weight:600;letter-spacing:-0.01em;margin:0 0 6px;text-wrap:balance}
+.post img{width:200px;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px;border:1px solid var(--line);transition:transform .25s ease}
+.post:hover img{transform:translateY(-3px)}
+.post:hover .go{color:var(--accent)}
+@media (max-width:560px){.post{grid-template-columns:1fr;gap:8px}.post-body{grid-template-columns:1fr}.post img{width:100%}}
+
 /* About */
 .about{padding:64px 0 24px}
 .about h2{font-size:14px;font-weight:600;margin:0 0 12px}
@@ -105,7 +115,7 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     <a class="brand" href="#top">Minh (Nora) Nguyen</a>
     <div class="links">
       <a href="#works">Works</a>
-      <a class="hide-sm" href="#works" aria-disabled="true">Blogs<span class="soon">soon</span></a>
+      <a class="hide-sm" href="#blogs">Blogs</a>
       <a class="hide-sm" href="#works" aria-disabled="true">Design Shots<span class="soon">soon</span></a>
       <a href="#about">About</a>
       <!-- TODO: replace # with your Google Drive resume link -->
@@ -192,6 +202,21 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
         </div>
       </div>
     </article>
+  </section>
+
+  <section class="blogs" id="blogs" aria-labelledby="blogs-title">
+    <div class="feed-head"><h2 id="blogs-title">Blogs</h2><span>1 post</span></div>
+    <a class="post" href="blog/dad-i-want-to-become-a-product-designer/">
+      <div class="date">Nov 10, 2026</div>
+      <div class="post-body">
+        <div>
+          <h3>"Dad, I want to become a Product Designer!"</h3>
+          <p class="desc">My 2-year journey from marketing to a design career, sparked by a visit to Google, LinkedIn and Oracle in Singapore.</p>
+          <span class="go">Read post →</span>
+        </div>
+        <img src="blog/dad-i-want-to-become-a-product-designer/singapore-tech-visit.jpg" width="1800" height="1200" alt="" loading="lazy">
+      </div>
+    </a>
   </section>
 
   <section class="about" id="about" aria-labelledby="about-title">
