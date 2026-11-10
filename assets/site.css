@@ -1,7 +1,7 @@
 :root{
   /* Timeline feed: one narrow column, dates in a mono rail, big thumbnails */
   --bg:#fafaf9;
-  --surface:#ffffff;
+  --surface:transparent;
   --ink:#141414;
   --muted:#6b6b6b;
   --line:#e7e5e2;
@@ -11,9 +11,9 @@
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#111111;--surface:#191919;--ink:#f2f2f0;--muted:#9a9a96;--line:#2a2a28;--accent:#ff5a4f;color-scheme:dark}
+  :root:not([data-theme="light"]){--bg:#111111;--surface:transparent;--ink:#f2f2f0;--muted:#9a9a96;--line:#2a2a28;--accent:#ff5a4f;color-scheme:dark}
 }
-:root[data-theme="dark"]{--bg:#111111;--surface:#191919;--ink:#f2f2f0;--muted:#9a9a96;--line:#2a2a28;--accent:#ff5a4f;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#111111;--surface:transparent;--ink:#f2f2f0;--muted:#9a9a96;--line:#2a2a28;--accent:#ff5a4f;color-scheme:dark}
 
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -237,3 +237,7 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
 .track .dot{width:5px;height:5px;border-radius:50%;background:var(--muted);opacity:.6}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .track .grp img[src*="github"],:root:not([data-theme="light"]) .track .grp img[src*="guitar"],:root:not([data-theme="light"]) .track .grp img[src*="running"],:root:not([data-theme="light"]) .track .grp img[src*="hiking"]{filter:invert(1)}}
 :root[data-theme="dark"] .track .grp img[src*="github"],:root[data-theme="dark"] .track .grp img[src*="guitar"],:root[data-theme="dark"] .track .grp img[src*="running"],:root[data-theme="dark"] .track .grp img[src*="hiking"]{filter:invert(1)}
+/* Transparent components: keep hover feedback without a white fill */
+.links a:hover,.contact a:hover,.rs-btns a:not(.pri):hover{background:color-mix(in srgb,var(--ink) 5%,transparent)}
+.links a[aria-current="page"]{background:transparent}
+@media (max-width:640px){.links{background:var(--bg)}}
