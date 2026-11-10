@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blogs · Minh (Nora) Nguyen</title>
+<meta name="description" content="Writing by Minh (Nora) Nguyen, Product Designer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="col">
+    <a class="brand" href="/">Minh (Nora) Nguyen</a>
+    <div class="links">
+      <a href="/">Works</a>
+      <a href="/blog/" aria-current="page">Blogs</a>
+      <a class="hide-sm" href="/shots/">Design Shots</a>
+      <a href="/about/">About</a>
+      <a class="cta" href="https://drive.google.com/file/d/1_ww6E40H3_KcrLkHbAdf2a5OAnSM7kxY/view" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<main class="col">
+  <header class="page-head">
+    <p class="eyebrow">Blogs</p>
+    <h1>Notes on design, careers and the messy middle of products.</h1>
+  </header>
+  <section aria-label="Posts">
+    <div class="feed-head"><h2>All posts</h2><span>1 post</span></div>
+    <a class="post" href="/blog/dad-i-want-to-become-a-product-designer/">
+      <div class="date">Nov 10, 2026</div>
+      <div class="post-body">
+        <div>
+          <h3>"Dad, I want to become a Product Designer!"</h3>
+          <p class="desc">My 2-year journey from marketing to a design career, sparked by a visit to Google, LinkedIn and Oracle in Singapore.</p>
+          <span class="go">Read post →</span>
+        </div>
+        <img src="/blog/dad-i-want-to-become-a-product-designer/singapore-tech-visit.jpg" width="1800" height="1200" alt="">
+      </div>
+    </a>
+  </section>
+  <section class="more" aria-labelledby="more-title">
+    <div class="feed-head"><h2 id="more-title">Selected work</h2><span><a href="/">See all →</a></span></div>
+    <ul class="mini">
+      <li><a href="https://trustcoco.ai" rel="noopener"><span class="d">Sep 14, 2026</span><span class="t">Coco AI · Australian AI Governance Startup</span><span class="arrow">↗</span></a></li>
+      <li><a href="/dynatax/"><span class="d">Sep 7, 2026</span><span class="t">DynaTax · US TaxTech Startup</span><span class="arrow">→</span></a></li>
+      <li><div class="nolink"><span class="d">Sep 2, 2026</span><span class="t">Zalo Community Marketplace</span><span class="arrow">soon</span></div></li>
+      <li><div class="nolink"><span class="d">Sep 1, 2026</span><span class="t">Pocketplus · Smart Wallet for Viet Gen Z</span><span class="arrow">soon</span></div></li>
+      <li><div class="nolink"><span class="d">Jan 1, 2026</span><span class="t">Patient &amp; Order Management · Healthcare</span><span class="arrow">soon</span></div></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="col">
+    <span class="status"><i aria-hidden="true"></i>Online · <span id="clock">Ho Chi Minh City</span></span>
+    <div class="flinks"><a href="/">Works</a><a href="/blog/">Blogs</a><a href="/shots/">Shots</a><a href="/about/">About</a></div>
+    <span>© 2026 Minh (Nora) Nguyen</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el=document.getElementById('clock');
+  function tick(){
+    try{
+      var t=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Ho_Chi_Minh'}).format(new Date());
+      el.textContent=t+' ICT, Ho Chi Minh City';
+    }catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+</body>
+</html>

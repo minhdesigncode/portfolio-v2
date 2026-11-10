@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Minh (Nora) Nguyen</title>
+<meta name="description" content="About Minh (Nora) Nguyen, a Product Designer working across Healthtech, Fintech and AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="col">
+    <a class="brand" href="/">Minh (Nora) Nguyen</a>
+    <div class="links">
+      <a href="/">Works</a>
+      <a href="/blog/">Blogs</a>
+      <a class="hide-sm" href="/shots/">Design Shots</a>
+      <a href="/about/" aria-current="page">About</a>
+      <a class="cta" href="https://drive.google.com/file/d/1_ww6E40H3_KcrLkHbAdf2a5OAnSM7kxY/view" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<main class="col">
+  <header class="page-head">
+    <p class="eyebrow">About</p>
+    <h1>Design as a bridge between human psychology and complex systems.</h1>
+  </header>
+  <figure class="about-photo">
+    <img src="/about/nora-google-singapore.jpg" width="1280" height="853" alt="Nora smiling in front of the colorful Google letters at the Google office in Singapore">
+    <figcaption>Google Singapore, where the spark for product design started.</figcaption>
+  </figure>
+  <div class="about-body">
+    <p class="lead">Minh (Nora) Nguyen is a Product Designer who views design not as a layer of pixels, but as a bridge between human psychology and complex systems.</p>
+    <p>What drives her work is a fundamental principle of human-centered design: great technology should feel invisible, effortlessly guiding people through intricate Healthtech, Fintech, and AI domains without friction or frustration.</p>
+    <p>Having transitioned from a business background into digital product design, she designs with a deep respect for both user mental models and underlying business constraints. For Nora, a truly functional interface doesn't force people to adapt to the system; it naturally adapts to the way humans think, decide, and feel.</p>
+    <div class="domains" aria-label="Domains"><span>Healthtech</span><span>Fintech</span><span>AI</span><span>B2B SaaS</span></div>
+    <div class="contact">
+      <a href="https://drive.google.com/file/d/1_ww6E40H3_KcrLkHbAdf2a5OAnSM7kxY/view" target="_blank" rel="noopener">View resume ↗</a>
+      <a href="mailto:nngocminh.work@gmail.com">nngocminh.work@gmail.com</a>
+      <a href="tel:+84988917469">+84 988 917 469</a>
+    </div>
+  </div>
+  <section class="more" aria-labelledby="more-title">
+    <div class="feed-head"><h2 id="more-title">Selected work</h2><span><a href="/">See all →</a></span></div>
+    <ul class="mini">
+      <li><a href="https://trustcoco.ai" rel="noopener"><span class="d">Sep 14, 2026</span><span class="t">Coco AI · Australian AI Governance Startup</span><span class="arrow">↗</span></a></li>
+      <li><a href="/dynatax/"><span class="d">Sep 7, 2026</span><span class="t">DynaTax · US TaxTech Startup</span><span class="arrow">→</span></a></li>
+      <li><div class="nolink"><span class="d">Sep 2, 2026</span><span class="t">Zalo Community Marketplace</span><span class="arrow">soon</span></div></li>
+      <li><div class="nolink"><span class="d">Sep 1, 2026</span><span class="t">Pocketplus · Smart Wallet for Viet Gen Z</span><span class="arrow">soon</span></div></li>
+      <li><div class="nolink"><span class="d">Jan 1, 2026</span><span class="t">Patient &amp; Order Management · Healthcare</span><span class="arrow">soon</span></div></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="col">
+    <span class="status"><i aria-hidden="true"></i>Online · <span id="clock">Ho Chi Minh City</span></span>
+    <div class="flinks"><a href="/">Works</a><a href="/blog/">Blogs</a><a href="/shots/">Shots</a><a href="/about/">About</a></div>
+    <span>© 2026 Minh (Nora) Nguyen</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el=document.getElementById('clock');
+  function tick(){
+    try{
+      var t=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Ho_Chi_Minh'}).format(new Date());
+      el.textContent=t+' ICT, Ho Chi Minh City';
+    }catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+</body>
+</html>
