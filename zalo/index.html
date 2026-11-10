@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zalo Community Marketplace Case Study · Minh (Nora) Nguyen</title>
+<link rel="icon" type="image/webp" href="https://framerusercontent.com/images/r7KOQmPMssjx5nrZ70GzcocD2E8.webp?width=64&amp;height=64">
+<link rel="apple-touch-icon" href="https://framerusercontent.com/images/r7KOQmPMssjx5nrZ70GzcocD2E8.webp?width=180&amp;height=180">
+<meta name="description" content="What if Zalo Chat became our neighborhood's trusted community marketplace? A UX research and design concept.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+/* Zalo: the deck is the hero; page chrome stays quiet */
+.deck{margin:8px auto 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#111;aspect-ratio:16/10}
+.deck iframe{display:block;width:100%;height:100%;border:0}
+.deck-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:12px}
+.deck-note a{text-decoration:underline;color:var(--ink)}
+.zl-cover{margin:8px auto 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fefdfc}
+.zl-cover video{display:block;width:100%;height:auto}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="col">
+    <a class="brand" href="/">Minh (Nora) Nguyen</a>
+    <div class="links">
+      <a href="/" aria-current="page">Works</a>
+      <a href="/blog/">Blogs</a>
+      <a class="hide-sm" href="/shots/">Design Shots</a>
+      <a href="/about/">About</a>
+      <a class="cta" href="https://drive.google.com/file/d/1_ww6E40H3_KcrLkHbAdf2a5OAnSM7kxY/view" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="col">
+    <a class="back" href="/">← Back to Works</a>
+    <header class="cs-head">
+      <div class="meta-line"><span class="date">Sep 2, 2026 · Case study</span></div>
+      <h1 style="font-size:clamp(32px,5vw,46px);line-height:1.08;font-weight:600;letter-spacing:-0.025em;margin:12px 0 0;text-wrap:balance">What if Zalo Chat became our neighborhood's trusted community marketplace?</h1>
+      <p class="lede">A concept study: neighbors already buy and sell in Zalo group chats. I explored how Zalo could turn those posts into listings, orders and delivery tracking, without leaving the chat.</p>
+      <dl class="cs-meta">
+        <div><dt>Type</dt><dd>Concept, self-initiated</dd></div>
+        <div><dt>Role</dt><dd>UX researcher, UX/UI designer</dd></div>
+        <div><dt>Methods</dt><dd>User interviews, UX research, prototyping</dd></div>
+        <div><dt>Tools</dt><dd>Figma</dd></div>
+      </dl>
+    </header>
+  </div>
+  <div class="zl-cover cs-wide"><video src="/thumbs/zalo.mp4" poster="/thumbs/zalo.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated Zalo marketplace screens: group listings, message actions and order tracking"></video></div>
+
+  <section class="cs-sec">
+    <div class="col">
+      <div class="num">Full case study</div>
+      <h2>The deck</h2>
+      <p>Use the arrows or click inside the deck to move through the slides. Press the expand button for full screen.</p>
+    </div>
+    <div class="deck cs-wide">
+      <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fdeck%2FTiw4mp7Z3jfCNdAE9N0gpl" title="Zalo Community Marketplace case study deck in Figma" loading="lazy" allowfullscreen></iframe>
+    </div>
+    <p class="deck-note">Deck not loading? <a href="https://www.figma.com/deck/Tiw4mp7Z3jfCNdAE9N0gpl" rel="noopener">Open it in Figma ↗</a> · <a href="https://zalouxcase.figweb.site/" rel="noopener">Read the web version ↗</a></p>
+  </section>
+
+  <div class="col">
+    <div class="cs-end"><a href="/">← Back to Works</a><a href="/pocketplus/">Next: Pocketplus →</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="col">
+    <span class="status"><i aria-hidden="true"></i>Online · <span id="clock">Ho Chi Minh City</span></span>
+    <div class="flinks"><a href="/">Works</a><a href="/blog/">Blogs</a><a href="/shots/">Shots</a><a href="/about/">About</a></div>
+    <span>© 2026 Minh (Nora) Nguyen</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var el=document.getElementById('clock');
+  function tick(){
+    try{
+      var t=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Ho_Chi_Minh'}).format(new Date());
+      el.textContent=t+' ICT, Ho Chi Minh City';
+    }catch(e){}
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+<script>
+(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();
+</script>
+</body>
+</html>
