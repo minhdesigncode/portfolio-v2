@@ -17,7 +17,8 @@
 <nav class="nav" aria-label="Main">
   <div class="col">
     <a class="brand" href="/">Minh (Nora) Nguyen</a>
-    <div class="links">
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Open menu"><span></span><span></span></button>
+    <div class="links" id="site-links">
       <a href="/" aria-current="page">Works</a>
       <a href="/blog/">Blogs</a>
       <a class="hide-sm" href="/shots/">Design Shots</a>
@@ -33,8 +34,12 @@
     <h1>Minh (Nora) Nguyen · Product Designer</h1>
     <p class="tagline">Let's make complex systems feel <em>human</em> &amp; intuitive.</p>
     <div class="contact">
-      <a href="mailto:nngocminh.work@gmail.com">nngocminh.work@gmail.com</a>
-      <a href="tel:+84988917469">+84 988 917 469</a>
+      <a href="mailto:nngocminh.work@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>nngocminh.work@gmail.com</a>
+      <a href="tel:+84988917469"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+84 988 917 469</a>
+    </div>
+    <div class="friends">
+      <span class="lbl">Daily friends</span>
+      <div class="marquee"><div class="track"><span class="tool"><img src="/assets/logos/figma.png" width="22" height="22" alt="">Figma</span><span class="slogan">Good design is <i>invisible</i></span><span class="tool"><span class="mono" aria-hidden="true">C</span>Claude</span><span class="tool"><span class="mono" aria-hidden="true">G</span>GitHub</span><span class="slogan">Designing since <i>2024</i></span><span class="tool"><span class="mono" aria-hidden="true">S</span>Stitch</span><span class="tool"><img src="/assets/logos/illustrator.png" width="22" height="22" alt="">Illustrator</span><span class="tool"><img src="/assets/logos/photoshop.png" width="22" height="22" alt="">Photoshop</span><span aria-hidden="true" style="display:contents"><span class="tool"><img aria-hidden="true" src="/assets/logos/figma.png" width="22" height="22" alt="">Figma</span><span class="slogan">Good design is <i>invisible</i></span><span class="tool"><span class="mono" aria-hidden="true">C</span>Claude</span><span class="tool"><span class="mono" aria-hidden="true">G</span>GitHub</span><span class="slogan">Designing since <i>2024</i></span><span class="tool"><span class="mono" aria-hidden="true">S</span>Stitch</span><span class="tool"><img aria-hidden="true" src="/assets/logos/illustrator.png" width="22" height="22" alt="">Illustrator</span><span class="tool"><img aria-hidden="true" src="/assets/logos/photoshop.png" width="22" height="22" alt="">Photoshop</span></span></div></div>
     </div>
   </header>
 
@@ -133,5 +138,6 @@
   try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}
 })();
 </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

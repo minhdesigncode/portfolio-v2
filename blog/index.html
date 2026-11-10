@@ -17,7 +17,8 @@
 <nav class="nav" aria-label="Main">
   <div class="col">
     <a class="brand" href="/">Minh (Nora) Nguyen</a>
-    <div class="links">
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Open menu"><span></span><span></span></button>
+    <div class="links" id="site-links">
       <a href="/">Works</a>
       <a href="/blog/" aria-current="page">Blogs</a>
       <a class="hide-sm" href="/shots/">Design Shots</a>
@@ -89,5 +90,6 @@
   tick();setInterval(tick,30000);
 })();
 </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

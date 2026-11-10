@@ -17,7 +17,8 @@
 <nav class="nav" aria-label="Main">
   <div class="col">
     <a class="brand" href="/">Minh (Nora) Nguyen</a>
-    <div class="links">
+    <button class="burger" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Open menu"><span></span><span></span></button>
+    <div class="links" id="site-links">
       <a href="/">Works</a>
       <a href="/blog/">Blogs</a>
       <a class="hide-sm" href="/shots/" aria-current="page">Design Shots</a>
@@ -61,5 +62,6 @@
   try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}
 })();
 </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
