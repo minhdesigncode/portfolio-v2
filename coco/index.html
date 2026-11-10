@@ -18,80 +18,87 @@
 .cc *{box-sizing:border-box}
 .cc .w{width:min(1120px,100% - 32px);margin-inline:auto}
 .cc .n{width:min(720px,100% - 32px);margin-inline:auto}
-.noise{background:radial-gradient(120% 90% at 0% 60%,#6d3df5 0%,transparent 55%),radial-gradient(80% 70% at 85% 10%,#7c3aed 0%,transparent 60%),linear-gradient(135deg,#a12ff0,#8f2be6 60%,#b23cf3);position:relative;overflow:hidden}
-.noise::after{content:"";position:absolute;inset:0;opacity:.32;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.noise{background:#0b0b0d;position:relative;overflow:hidden}
+.noise-off::after{content:"";position:absolute;inset:0;opacity:.32;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
 .cc-hero{color:#fff;padding:28px 0 0}
-.cc-hero .back{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff;margin-top:0}
-.cc-hero .back:hover{background:rgba(255,255,255,.24);border-color:#fff;color:#fff}
+.cc-hero .back{background:transparent;border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.8);margin-top:0}
+.cc-hero .back:hover{border-color:#fff;color:#fff;background:transparent}
 .cc-hero .row1{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding:56px 0 40px;position:relative;z-index:1}
-.cc-kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin:0 0 16px}
+.cc .cc-kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#c084fc;margin:0 0 16px}
 .cc-hero h1{font-family:var(--font-coco);font-weight:800;font-size:clamp(44px,7.4vw,96px);line-height:.92;letter-spacing:-0.035em;margin:0;text-wrap:balance}
-.cc-hero .lede{font-size:19px;line-height:1.55;margin:0;opacity:.95;max-width:46ch}
-.cc-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;border-top:1px solid rgba(255,255,255,.28);padding:20px 0 36px;margin:0;position:relative;z-index:1}
-.cc-meta dt{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;opacity:.75;margin-bottom:4px}
+.cc .cc-hero .lede{font-size:19px;line-height:1.6;margin:0;color:rgba(255,255,255,.78);max-width:46ch}
+.cc-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;border-top:1px solid rgba(255,255,255,.16);padding:20px 0 36px;margin:0;position:relative;z-index:1}
+.cc-meta dt{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-bottom:4px}
 .cc-meta dd{margin:0;font-size:14.5px;line-height:1.45}
-.cc-cover{position:relative;z-index:1;border-radius:18px 18px 0 0;overflow:hidden;box-shadow:0 -20px 60px rgba(40,0,90,.35)}
+.cc-cover{position:relative;z-index:1;border-radius:18px 18px 0 0;overflow:hidden}
 .cc-cover img{width:100%;height:auto;display:block}
 .cc-sec{padding:96px 0 0}
 .cc-num{font-family:var(--font-mono);font-size:12px;color:var(--coco);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.cc-num::before{content:"";width:18px;height:18px;border-radius:5px;background:var(--coco);transform:rotate(45deg) scale(.6)}
+.cc-num::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--coco);transform:rotate(45deg)}
 .cc h2{font-family:var(--font-coco);font-weight:700;font-size:clamp(30px,4.2vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 16px;text-wrap:balance}
 .cc h3{font-family:var(--font-coco);font-weight:600;font-size:20px;margin:0 0 6px;letter-spacing:-0.01em}
-.cc p{font-size:17px;line-height:1.65;color:#4b3f5c;margin:0 0 14px;max-width:64ch;text-wrap:pretty}
+.cc p{font-size:17px;line-height:1.65;color:#55555c;margin:0 0 14px;max-width:64ch;text-wrap:pretty}
 .cc p b{color:var(--coco-ink)}
 .big-q{font-family:var(--font-coco);font-weight:600;font-size:clamp(24px,3.2vw,36px);line-height:1.2;letter-spacing:-0.02em;color:var(--coco-ink);max-width:24ch;margin:0}
-.big-q em{font-style:normal;color:var(--coco)}
+.big-q em{font-style:normal;background:#111;color:#fff;padding:0 .18em;border-radius:6px}
 .verdicts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
-.vd{border-radius:16px;padding:18px;border:1px solid var(--coco-line);background:#fff}
+.vd{border-radius:16px;padding:18px;border:1px solid #e6e6e9;background:#fff}
 .vd .pill{display:inline-block;color:#fff;font-size:13px;font-weight:600;padding:4px 11px;border-radius:999px;margin-bottom:10px}
 .vd p{font-size:14.5px;margin:0}
 .p-auto{background:var(--c-auto)}.p-obs{background:var(--c-obs)}.p-esc{background:var(--c-esc)}.p-blk{background:var(--c-blk)}
 .split2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.shot{margin:0}
-.shot .fr{border-radius:16px;overflow:hidden;border:1px solid var(--coco-line);background:#fff;box-shadow:0 18px 50px -24px rgba(91,22,181,.35)}
-.shot img{width:100%;height:auto;display:block}
-.shot figcaption{font-size:13.5px;color:#6b5d80;margin-top:10px}
-.shot figcaption b{color:var(--coco-ink);font-weight:600;margin-right:6px}
-.tint{background:var(--coco-tint);border-radius:28px;padding:clamp(20px,4vw,48px);margin-top:32px}
+.cs-shot{margin:0}
+.cs-shot .fr{border-radius:14px;overflow:hidden;border:1px solid #e6e6e9;background:#fff}
+.cs-shot img{width:100%;height:auto;display:block}
+.cs-shot figcaption{font-size:13.5px;color:#6b6b72;margin-top:12px;text-align:center}
+.cs-shot figcaption b{color:#111;font-weight:600;margin-right:6px}
+.tint{background:#f4f4f5;border-radius:28px;padding:clamp(20px,4vw,48px);margin-top:32px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
 .grid3{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:start}
 .stack{display:grid;gap:18px}
 .why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
-.why div{background:#fff;border:1px solid var(--coco-line);border-radius:16px;padding:18px}
+.why > div{background:#fff;border:1px solid #e6e6e9;border-radius:16px;padding:18px}
 .why .k{font-family:var(--font-mono);font-size:11px;color:var(--coco);margin-bottom:8px}
 .why p{font-size:14.5px;margin:0}
 /* Product map (built wireframe) */
 .map{border-radius:28px;padding:clamp(18px,3.5vw,40px);color:#fff;margin-top:32px}
 .map-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.6fr;gap:22px}
-.lane h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;opacity:.85;font-weight:500}
+.lane h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;color:#c084fc;font-weight:500}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:8px}
-.steps li{counter-increment:s;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 12px;font-size:14.5px}
-.steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:#fff;color:var(--coco);font-size:12px;font-weight:700;display:grid;place-items:center;flex:none}
+.steps li{counter-increment:s;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:#fff;color:#111;font-size:12px;font-weight:700;display:grid;place-items:center;flex:none}
 .steps li.end{background:#fff;color:var(--coco-ink);font-weight:600}
 .steps li.end::before{content:"→";background:var(--coco);color:#fff}
 .app{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .box{background:rgba(255,255,255,.96);color:var(--coco-ink);border-radius:14px;padding:14px}
 .box .t{font-family:var(--font-coco);font-weight:600;font-size:15px;margin-bottom:8px;display:flex;justify-content:space-between}
-.box .t small{font-family:var(--font-mono);font-weight:400;font-size:10.5px;color:var(--coco)}
+.box .t small{font-family:var(--font-mono);font-weight:400;font-size:10.5px;color:#8b8b93}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{font-size:12.5px;background:var(--coco-tint);color:var(--coco-deep);border-radius:999px;padding:4px 10px}
+.chips span{font-size:12.5px;background:#f1f1f3;color:#222;border-radius:999px;padding:4px 10px}
 .box.wide{grid-column:1 / -1}
 .team{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.facts div{border-top:2px solid var(--coco);padding-top:10px}
+.facts > div{border-top:2px solid #111;padding-top:10px}
 .facts b{font-family:var(--font-coco);font-size:22px;display:block;color:var(--coco-ink)}
 .facts span{font-size:13.5px;color:#6b5d80}
 .cc-end{margin-top:96px;padding:48px 0;color:#fff}
 .cc-end .w{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 .cc-end h2{color:#fff;margin:0}
-.cc-end a{display:inline-flex;gap:8px;background:#fff;color:var(--coco-deep);font-weight:600;padding:12px 18px;border-radius:999px}
-.cc-end a.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.cc-end a{display:inline-flex;gap:8px;background:#fff;color:#111;font-weight:600;padding:12px 18px;border-radius:999px}
+.cc-end a.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
 footer{margin-top:0}
 @media (max-width:860px){
   .cc-hero .row1,.split2,.team,.map-grid,.grid2,.grid3{grid-template-columns:1fr}
   .cc-meta,.verdicts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .why{grid-template-columns:1fr}
 }
+/* Final product demo band */
+.demo{margin-top:96px;padding:80px 0 72px;color:#fff;text-align:center}
+.demo .w{position:relative;z-index:1}
+.demo .cc-kicker{margin-bottom:12px}
+.demo h2{color:#fff;margin:0 auto 12px;max-width:20ch}
+.cc .demo p{color:rgba(255,255,255,.7);margin:0 auto 36px;max-width:56ch}
+.demo video{display:block;width:100%;max-width:1120px;height:auto;margin:0 auto}
 </style>
 </head>
 <body>
@@ -163,7 +170,7 @@ footer{margin-top:0}
       </div>
     </div>
     <div class="w tint">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/draft-flow.jpg" width="1686" height="592" loading="lazy" alt="The team draft onboarding flow in Figma: authentication, team setup, project, what Coco does, framework, pricing and API key"></div><figcaption><b>Starting point</b>The founders' draft onboarding flow.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/draft-flow.jpg" width="1686" height="592" loading="lazy" alt="The team draft onboarding flow in Figma: authentication, team setup, project, what Coco does, framework, pricing and API key"></div><figcaption><b>Starting point</b>The founders' draft onboarding flow.</figcaption></figure>
       <div class="why">
         <div><div class="k">Technical depth</div><h3>Contracts, verdicts, SDKs</h3><p>Every concept needed plain-language naming and a clear home.</p></div>
         <div><div class="k">Two audiences</div><h3>Engineers and risk teams</h3><p>Setup is for developers; daily review is for people who are not.</p></div>
@@ -205,6 +212,15 @@ footer{margin-top:0}
     </div>
   </section>
 
+  <section class="demo noise" aria-labelledby="demo-title">
+    <div class="w">
+      <p class="cc-kicker">Final product · desktop</p>
+      <h2 id="demo-title">From sign in to the first verdict</h2>
+      <p>The live MVP, end to end: sign in, set up a project, connect an agent and watch verdicts land on the dashboard.</p>
+      <video src="/coco/assets/demo.mp4" poster="/coco/assets/demo-poster.jpg" width="1600" height="900" autoplay muted loop playsinline preload="metadata" aria-label="Desktop demo of the Coco product, from sign in through onboarding to the dashboard"></video>
+    </div>
+  </section>
+
   <section class="cc-sec">
     <div class="w split2">
       <div>
@@ -217,12 +233,12 @@ footer{margin-top:0}
     </div>
     <div class="w tint">
       <div class="grid2">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/login.jpg" width="1800" height="1169" alt="Coco sign in screen with GitHub, Google and email options"></div><figcaption><b>Sign in</b>GitHub, Google or email.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/onb-project.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 2: name your first project and choose a workflow family"></div><figcaption><b>Step 2</b>One project, one workflow family.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/onb-framework.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 4: choose the agent framework"></div><figcaption><b>Step 4</b>Pick the agent runtime.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/onb-pricing.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 5: pricing plans Free, Pro, Max and Enterprise"></div><figcaption><b>Step 5</b>Plans priced by checks.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/login.jpg" width="1800" height="1169" alt="Coco sign in screen with GitHub, Google and email options"></div><figcaption><b>Sign in</b>GitHub, Google or email.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/onb-project.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 2: name your first project and choose a workflow family"></div><figcaption><b>Step 2</b>One project, one workflow family.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/onb-framework.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 4: choose the agent framework"></div><figcaption><b>Step 4</b>Pick the agent runtime.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/onb-pricing.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 5: pricing plans Free, Pro, Max and Enterprise"></div><figcaption><b>Step 5</b>Plans priced by checks.</figcaption></figure>
       </div>
-      <div style="margin-top:18px"><figure class="shot"><div class="fr"><img src="/coco/assets/onb-apikey.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 6: API key with SDK code snippet"></div><figcaption><b>Step 6</b>The key and a ready-to-paste snippet.</figcaption></figure></div>
+      <div style="margin-top:18px"><figure class="cs-shot"><div class="fr"><img src="/coco/assets/onb-apikey.jpg" width="1800" height="1169" loading="lazy" alt="Onboarding step 6: API key with SDK code snippet"></div><figcaption><b>Step 6</b>The key and a ready-to-paste snippet.</figcaption></figure></div>
     </div>
   </section>
 
@@ -237,10 +253,10 @@ footer{margin-top:0}
       </div>
     </div>
     <div class="w tint">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/dashboard.jpg" width="1800" height="1396" loading="lazy" alt="Coco dashboard with verdict totals, monthly verdict trend, recent alerts and all projects"></div><figcaption><b>Dashboard</b>All projects, last 30 days.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/dashboard.jpg" width="1800" height="1396" loading="lazy" alt="Coco dashboard with verdict totals, monthly verdict trend, recent alerts and all projects"></div><figcaption><b>Dashboard</b>All projects, last 30 days.</figcaption></figure>
       <div class="grid2" style="margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/projects.jpg" width="1800" height="1169" loading="lazy" alt="Projects list with live, testing and draft projects"></div><figcaption><b>Projects</b>Each project maps to one workflow family.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/project-overview.jpg" width="1512" height="982" loading="lazy" alt="Agentic payments project overview with verdicts, top contracts, agent activity and enforcement configuration"></div><figcaption><b>Project overview</b>Agentic payments, live on Claude Code.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/projects.jpg" width="1800" height="1169" loading="lazy" alt="Projects list with live, testing and draft projects"></div><figcaption><b>Projects</b>Each project maps to one workflow family.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/project-overview.jpg" width="1512" height="982" loading="lazy" alt="Agentic payments project overview with verdicts, top contracts, agent activity and enforcement configuration"></div><figcaption><b>Project overview</b>Agentic payments, live on Claude Code.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -257,10 +273,10 @@ footer{margin-top:0}
       </div>
     </div>
     <div class="w tint">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/escalations.jpg" width="1800" height="1169" loading="lazy" alt="Escalations list with pending approvals, contract, agent action, Reject and Approve buttons"></div><figcaption><b>Escalations</b>Approve or reject, with SLA breaches flagged.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/escalations.jpg" width="1800" height="1169" loading="lazy" alt="Escalations list with pending approvals, contract, agent action, Reject and Approve buttons"></div><figcaption><b>Escalations</b>Approve or reject, with SLA breaches flagged.</figcaption></figure>
       <div class="grid2" style="margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/audit-logs.jpg" width="1800" height="1169" loading="lazy" alt="Audit logs table filtered by verdict"></div><figcaption><b>Audit logs</b>Every verdict, filterable by type.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/audit-detail.jpg" width="1800" height="1169" loading="lazy" alt="Audit log detail drawer explaining what happened, the checks and the contract"></div><figcaption><b>Detail drawer</b>"What happened" first, code last.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/audit-logs.jpg" width="1800" height="1169" loading="lazy" alt="Audit logs table filtered by verdict"></div><figcaption><b>Audit logs</b>Every verdict, filterable by type.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/audit-detail.jpg" width="1800" height="1169" loading="lazy" alt="Audit log detail drawer explaining what happened, the checks and the contract"></div><figcaption><b>Detail drawer</b>"What happened" first, code last.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -278,10 +294,10 @@ footer{margin-top:0}
     </div>
     <div class="w tint">
       <div class="grid2">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/contracts.jpg" width="1800" height="1276" loading="lazy" alt="Contracts list with a selected rule, what it governs and its config"></div><figcaption><b>Contracts</b>Each rule, its source clause and config.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/generate-contract.jpg" width="1800" height="1169" loading="lazy" alt="Generate new contract drawer with uploaded policy documents"></div><figcaption><b>Generate</b>Upload policies, extract drafts.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/contracts.jpg" width="1800" height="1276" loading="lazy" alt="Contracts list with a selected rule, what it governs and its config"></div><figcaption><b>Contracts</b>Each rule, its source clause and config.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/generate-contract.jpg" width="1800" height="1169" loading="lazy" alt="Generate new contract drawer with uploaded policy documents"></div><figcaption><b>Generate</b>Upload policies, extract drafts.</figcaption></figure>
       </div>
-      <div style="margin-top:18px"><figure class="shot"><div class="fr"><img src="/coco/assets/evaluation.jpg" width="1800" height="1276" loading="lazy" alt="Evaluation dashboard with LLM agent scores and human manual evaluation"></div><figcaption><b>Evaluation</b>LLM scoring next to human ratings.</figcaption></figure></div>
+      <div style="margin-top:18px"><figure class="cs-shot"><div class="fr"><img src="/coco/assets/evaluation.jpg" width="1800" height="1276" loading="lazy" alt="Evaluation dashboard with LLM agent scores and human manual evaluation"></div><figcaption><b>Evaluation</b>LLM scoring next to human ratings.</figcaption></figure></div>
     </div>
   </section>
 
@@ -296,10 +312,10 @@ footer{margin-top:0}
       </div>
     </div>
     <div class="w tint">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/controls.jpg" width="1800" height="1169" loading="lazy" alt="Controls table with step, stage, execution and source"></div><figcaption><b>Controls</b>Metrics per step and stage.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/controls.jpg" width="1800" height="1169" loading="lazy" alt="Controls table with step, stage, execution and source"></div><figcaption><b>Controls</b>Metrics per step and stage.</figcaption></figure>
       <div class="grid2" style="margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/sdk-keys.jpg" width="1800" height="1169" loading="lazy" alt="SDK and API keys table with status toggles"></div><figcaption><b>SDK &amp; API keys</b>One key per environment.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/settings-members.jpg" width="1800" height="1169" loading="lazy" alt="Settings members table with roles"></div><figcaption><b>Settings</b>Members and roles.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/sdk-keys.jpg" width="1800" height="1169" loading="lazy" alt="SDK and API keys table with status toggles"></div><figcaption><b>SDK &amp; API keys</b>One key per environment.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/settings-members.jpg" width="1800" height="1169" loading="lazy" alt="Settings members table with roles"></div><figcaption><b>Settings</b>Members and roles.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -316,30 +332,30 @@ footer{margin-top:0}
       </div>
     </div>
     <div class="w tint">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/ds-brand-guideline.jpg" width="1600" height="1142" loading="lazy" alt="Coco brand guideline slides: logo, colors, typography and patterns"></div><figcaption><b>Brand guideline</b>Logo, color, type and pattern, v1.01.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-brand-guideline.jpg" width="1600" height="1142" loading="lazy" alt="Coco brand guideline slides: logo, colors, typography and patterns"></div><figcaption><b>Brand guideline</b>Logo, color, type and pattern, v1.01.</figcaption></figure>
       <div class="grid3" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-color-light.jpg" width="900" height="842" loading="lazy" alt="Coco light theme base colors"></div><figcaption><b>Light</b>Base tokens.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-color-dark.jpg" width="900" height="843" loading="lazy" alt="Coco dark theme base colors"></div><figcaption><b>Dark</b>Same names, dark values.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-color-support.jpg" width="900" height="844" loading="lazy" alt="Supportive and semantic colors for verdicts"></div><figcaption><b>Semantic</b>Verdicts as tokens.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-color-light.jpg" width="900" height="842" loading="lazy" alt="Coco light theme base colors"></div><figcaption><b>Light</b>Base tokens.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-color-dark.jpg" width="900" height="843" loading="lazy" alt="Coco dark theme base colors"></div><figcaption><b>Dark</b>Same names, dark values.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-color-support.jpg" width="900" height="844" loading="lazy" alt="Supportive and semantic colors for verdicts"></div><figcaption><b>Semantic</b>Verdicts as tokens.</figcaption></figure>
       </div>
       <div class="grid2" style="margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-start-1.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: components usage"></div><figcaption><b>Docs</b>Components usage.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-start-2.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: color convention and rules"></div><figcaption><b>Docs</b>Color naming rules.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-start-3.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: product colours"></div><figcaption><b>Docs</b>Theming product colors.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-start-4.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: typography"></div><figcaption><b>Docs</b>Paragraph and UI type.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-start-1.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: components usage"></div><figcaption><b>Docs</b>Components usage.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-start-2.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: color convention and rules"></div><figcaption><b>Docs</b>Color naming rules.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-start-3.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: product colours"></div><figcaption><b>Docs</b>Theming product colors.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-start-4.jpg" width="1200" height="757" loading="lazy" alt="Getting started guide: typography"></div><figcaption><b>Docs</b>Paragraph and UI type.</figcaption></figure>
       </div>
       <div class="grid3" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px">
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-button-usage.jpg" width="1400" height="788" loading="lazy" alt="Button component documentation with a login example"></div><figcaption><b>Button</b>Usage, shipped in Figma, React, Elixir and Flutter.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-button-states.jpg" width="1400" height="788" loading="lazy" alt="Button states: default, hover, focus, disabled"></div><figcaption><b>States</b>Driven by Coco tokens.</figcaption></figure>
-        <figure class="shot"><div class="fr"><img src="/coco/assets/ds-button-motion.jpg" width="1400" height="788" loading="lazy" alt="Button animations: pulse and loading"></div><figcaption><b>Motion</b>Pulse and loading.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-button-usage.jpg" width="1400" height="788" loading="lazy" alt="Button component documentation with a login example"></div><figcaption><b>Button</b>Usage, shipped in Figma, React, Elixir and Flutter.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-button-states.jpg" width="1400" height="788" loading="lazy" alt="Button states: default, hover, focus, disabled"></div><figcaption><b>States</b>Driven by Coco tokens.</figcaption></figure>
+        <figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-button-motion.jpg" width="1400" height="788" loading="lazy" alt="Button animations: pulse and loading"></div><figcaption><b>Motion</b>Pulse and loading.</figcaption></figure>
       </div>
-      <div style="margin-top:18px"><figure class="shot"><div class="fr"><img src="/coco/assets/ds-dev-flow.jpg" width="2000" height="730" loading="lazy" alt="Coco component development flow and product development flow"></div><figcaption><b>Contribution flow</b>From request to release: design, review, changelog, development, dev review against tokens and accessibility, then release.</figcaption></figure></div>
+      <div style="margin-top:18px"><figure class="cs-shot"><div class="fr"><img src="/coco/assets/ds-dev-flow.jpg" width="2000" height="730" loading="lazy" alt="Coco component development flow and product development flow"></div><figcaption><b>Contribution flow</b>From request to release: design, review, changelog, development, dev review against tokens and accessibility, then release.</figcaption></figure></div>
     </div>
   </section>
 
   <section class="cc-sec">
     <div class="w team">
-      <figure class="shot"><div class="fr"><img src="/coco/assets/team-call.jpg" width="1800" height="1023" loading="lazy" alt="Weekly team video call reviewing the document extraction pipeline"></div><figcaption><b>Weekly sync</b>Walking through the policy extraction pipeline with engineering.</figcaption></figure>
+      <figure class="cs-shot"><div class="fr"><img src="/coco/assets/team-call.jpg" width="1800" height="1023" loading="lazy" alt="Weekly team video call reviewing the document extraction pipeline"></div><figcaption><b>Weekly sync</b>Walking through the policy extraction pipeline with engineering.</figcaption></figure>
       <div>
         <div class="cc-num">10 · Team</div>
         <h2>Built across Vietnam and Melbourne</h2>
@@ -379,6 +395,9 @@ footer{margin-top:0}
   }
   tick();setInterval(tick,30000);
 })();
+</script>
+<script>
+(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();
 </script>
 </body>
 </html>
