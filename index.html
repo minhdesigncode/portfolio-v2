@@ -61,8 +61,10 @@ img{max-width:100%;display:block}
 .date{font-family:var(--font-mono);font-size:12px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
 .entry h3{font-size:19px;font-weight:600;letter-spacing:-0.01em;margin:0 0 6px;text-wrap:balance}
 .entry .desc{color:var(--muted);font-size:15px;margin:0 0 16px}
-.thumb{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:16/10;transition:transform .25s ease}
-.thumb img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.thumb{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:16/9;transition:transform .25s ease}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
+.thumb.fit{background:#fefdfc}
+.thumb.fit img{object-fit:contain}
 a.thumb:hover{transform:translateY(-3px)}
 .ph{width:100%;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:22px;color:#fff}
 .ph b{font-size:clamp(24px,4vw,34px);letter-spacing:-0.02em;line-height:1}
@@ -142,8 +144,8 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div class="date">Sep 14, 2026</div>
       <div>
         <h3>Coco AI · Australian AI Governance Startup</h3>
-        <p class="desc">Website and UI for an AI governance platform.</p>
-        <a class="thumb" href="https://trustcoco.ai" rel="noopener"><div class="ph coco"><small>trustcoco.ai</small><b>Coco AI</b></div></a>
+        <p class="desc">Website and dashboard UI for a platform that governs what AI agents are allowed to do.</p>
+        <a class="thumb" href="https://trustcoco.ai" rel="noopener"><img src="thumbs/coco.jpg" width="1600" height="900" alt="Coco AI agentic payments dashboard on a laptop" loading="lazy"></a>
         <div class="row">
           <div class="tags"><span>#web development</span><span>#ui design</span></div>
           <a class="go" href="https://trustcoco.ai" rel="noopener">Visit site ↗</a>
@@ -156,7 +158,7 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div>
         <h3>DynaTax · US TaxTech Startup</h3>
         <p class="desc">Settings, Business Management and Billing for an AI bookkeeping and tax workspace.</p>
-        <a class="thumb" href="dynatax/"><img src="dynatax/assets/ui-business-management.jpg" width="2400" height="1551" alt="DynaTax Business Management screen"></a>
+        <a class="thumb" href="dynatax/"><img src="thumbs/dynatax.jpg" width="1600" height="900" alt="DynaTax Platform case study cover with the dashboard and account settings menu"></a>
         <div class="row">
           <div class="tags"><span>#product design</span><span>#saas</span><span>#information architecture</span></div>
           <a class="go" href="dynatax/">View case study →</a>
@@ -169,7 +171,7 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div>
         <h3>What if Zalo Chat became our neighborhood's trusted Community Marketplace?</h3>
         <p class="desc">Concept study from user interviews to a working prototype.</p>
-        <div class="thumb"><div class="ph zalo"><small>Concept · UX research</small><b>Zalo Community Market</b></div></div>
+        <div class="thumb fit"><img src="thumbs/zalo.jpg" width="1600" height="1116" alt="Three Zalo screens: group marketplace posts, message actions and order tracking" loading="lazy"></div>
         <div class="row">
           <div class="tags"><span>#UXresearch</span><span>#userinterview</span><span>#uxdesign</span><span>#figma</span></div>
           <span class="go off">Case study coming</span>
@@ -182,7 +184,7 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div>
         <h3>Pocketplus · Smart Wallet for Viet Gen Z</h3>
         <p class="desc">Mobile finance app designed during a UI bootcamp.</p>
-        <div class="thumb"><div class="ph pocket"><small>Mobile app · Bootcamp</small><b>Pocketplus</b></div></div>
+        <div class="thumb fit"><img src="thumbs/pocketplus.jpg" width="1376" height="960" alt="PockPlus smart wallet app showing stacked bank cards, ID and tickets" loading="lazy"></div>
         <div class="row">
           <div class="tags"><span>#ui design</span><span>#figma</span><span>#bootcamp</span></div>
           <span class="go off">Case study coming</span>
@@ -194,8 +196,8 @@ footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
       <div class="date">Jan 1, 2026</div>
       <div>
         <h3>Patient &amp; Order Management · End-to-End Healthcare Design</h3>
-        <p class="desc">Web platform for managing patients and orders at medscore.io.</p>
-        <div class="thumb"><div class="ph med"><small>medscore.io</small><b>Medscore</b></div></div>
+        <p class="desc">Patient app flow from login and identity verification to application status and proof of treatment.</p>
+        <div class="thumb"><img src="thumbs/medscore.jpg" width="1600" height="899" alt="Med app screens: login, identity verification, patient information and application status" loading="lazy"></div>
         <div class="row">
           <div class="tags"><span>#web design</span><span>#healthcare</span></div>
           <span class="go off">Coming soon</span>
