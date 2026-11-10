@@ -176,3 +176,10 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
   .cs-cards,.cs-out{grid-template-columns:1fr}
   .cs-feature{grid-template-columns:1fr;gap:12px}
 }
+.cs-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.cs-grid2 .cs-fig{margin:0}
+.cs-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.cs-split .cs-card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+.cs-split .cs-card li{margin-bottom:4px}
+.cs-quote{margin:28px 0 0;padding:4px 0 4px 18px;border-left:3px solid var(--accent);font-size:19px;line-height:1.45;font-weight:500;letter-spacing:-0.01em;color:var(--ink);max-width:56ch}
+@media (max-width:760px){.cs-grid2,.cs-split{grid-template-columns:1fr}}
