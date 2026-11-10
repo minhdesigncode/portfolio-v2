@@ -28,8 +28,8 @@
   <div class="shots">
     <a class="shot" href="https://trustcoco.ai" rel="noopener"><img src="/thumbs/coco.jpg" width="1600" height="900" alt="Coco AI agentic payments dashboard" loading="lazy"><span class="label">Coco AI</span></a>
     <a class="shot" href="/dynatax/"><img src="/thumbs/dynatax.jpg" width="1600" height="900" alt="DynaTax Platform case study cover" loading="lazy"><span class="label">DynaTax Platform</span></a>
-    <div class="shot"><img src="/thumbs/zalo.jpg" width="1600" height="1116" alt="Zalo community marketplace screens" loading="lazy"><span class="label">Zalo Community Marketplace</span></div>
-    <div class="shot"><img src="/thumbs/pocketplus.jpg" width="1376" height="960" alt="PockPlus smart wallet app" loading="lazy"><span class="label">PockPlus+ Smart Wallet</span></div>
+    <div class="shot"><video src="/thumbs/zalo.mp4" poster="/thumbs/zalo.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated walkthrough of Zalo community marketplace screens"></video><span class="label">Zalo Community Marketplace</span></div>
+    <div class="shot"><video src="/thumbs/pocketplus.mp4" poster="/thumbs/pocketplus.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated walkthrough of the PockPlus smart wallet app"></video><span class="label">PockPlus+ Smart Wallet</span></div>
     <div class="shot"><img src="/thumbs/medscore.jpg" width="1600" height="899" alt="Med patient app screens" loading="lazy"><span class="label">Design for Healthcare</span></div>
   </div>
 </main>
@@ -52,6 +52,11 @@
     }catch(e){}
   }
   tick();setInterval(tick,30000);
+})();
+</script>
+<script>
+(function(){
+  try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}
 })();
 </script>
 </body>

@@ -70,7 +70,7 @@
       <div>
         <h3>What if Zalo Chat became our neighborhood's trusted Community Marketplace?</h3>
         <p class="desc">Concept study from user interviews to a working prototype.</p>
-        <div class="thumb fit"><img src="thumbs/zalo.jpg" width="1600" height="1116" alt="Three Zalo screens: group marketplace posts, message actions and order tracking" loading="lazy"></div>
+        <div class="thumb fit"><video src="/thumbs/zalo.mp4" poster="/thumbs/zalo.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated walkthrough of Zalo community marketplace screens"></video></div>
         <div class="row">
           <div class="tags"><span>#UXresearch</span><span>#userinterview</span><span>#uxdesign</span><span>#figma</span></div>
           <span class="go off">Case study coming</span>
@@ -83,7 +83,7 @@
       <div>
         <h3>Pocketplus · Smart Wallet for Viet Gen Z</h3>
         <p class="desc">Mobile finance app designed during a UI bootcamp.</p>
-        <div class="thumb fit"><img src="thumbs/pocketplus.jpg" width="1376" height="960" alt="PockPlus smart wallet app showing stacked bank cards, ID and tickets" loading="lazy"></div>
+        <div class="thumb fit"><video src="/thumbs/pocketplus.mp4" poster="/thumbs/pocketplus.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated walkthrough of the PockPlus smart wallet app"></video></div>
         <div class="row">
           <div class="tags"><span>#ui design</span><span>#figma</span><span>#bootcamp</span></div>
           <span class="go off">Case study coming</span>
@@ -124,6 +124,11 @@
     }catch(e){}
   }
   tick();setInterval(tick,30000);
+})();
+</script>
+<script>
+(function(){
+  try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}
 })();
 </script>
 </body>
