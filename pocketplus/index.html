@@ -54,6 +54,7 @@
 .pp .proto figcaption b{color:var(--ink);font-weight:600}
 .pp .proto figcaption a{text-decoration:underline}
 @media (max-width:760px){.pp .protos{grid-template-columns:1fr}.pp .proto-frame{height:640px}}
+.pp .phones-2{grid-template-columns:repeat(2,minmax(0,260px));justify-content:center}
 .pp .notes{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
 .pp .notes li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15.5px;color:var(--muted)}
 .pp .notes li b{color:var(--ink);font-weight:600}
@@ -247,14 +248,9 @@
         <figcaption><b>Add and use a bank card</b> · <a href="https://www.figma.com/proto/yZHxmpabCKWCNVvw04dIeC/PocketPlus?node-id=1055-6439&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=713%3A1598&amp;starting-point-node-id=1055%3A6439" rel="noopener">Open in Figma ↗</a></figcaption>
       </figure>
     </div>
-    <div class="phones cs-wide">
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-f9d4c9d01fefa62f9f448ff706a0ca0640f29d1d/w=552" loading="lazy" alt="Animated prototype: Sign in"><figcaption>Sign in</figcaption></figure>
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-70b56ad4d8e209bd8f54e9403528568b127667de/w=552" loading="lazy" alt="Animated prototype: Sign up"><figcaption>Sign up</figcaption></figure>
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-37323bf51d6752e8d95c6b5e0f73480d8a84bddd/w=552" loading="lazy" alt="Animated prototype: Scan a bank card"><figcaption>Scan a bank card</figcaption></figure>
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-adf0502e3ea5e6b0bbfc614a53fb7642d9d0b54a/w=552" loading="lazy" alt="Animated prototype: Add a card manually"><figcaption>Add a card manually</figcaption></figure>
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/__assets/81e9a636820f582f825df47ae1987676af87bc77" onerror="this.closest(\'figure\').remove()" loading="lazy" alt="Animated prototype: Pay with a card"><figcaption>Pay with a card</figcaption></figure>
+    <div class="phones phones-2 cs-wide">
+      <figure class="phone"><video src="/pocketplus/assets/add-card-manually.mp4" width="424" height="830" autoplay muted loop playsinline preload="metadata" aria-label="Animated prototype: Add a card manually" style="width:100%;height:auto;display:block;border-radius:22px"></video><figcaption>Add a card manually</figcaption></figure>
       <figure class="phone"><video src="/pocketplus/assets/add-id-card.mp4" width="412" height="836" autoplay muted loop playsinline preload="metadata" aria-label="Animated prototype: Add an ID card" style="width:100%;height:auto;display:block;border-radius:22px"></video><figcaption>Add an ID card</figcaption></figure>
-      <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-97c1be18bda89383ee8e3664814152ba020e9a9d/w=552" loading="lazy" alt="Animated prototype: Add an e-ticket"><figcaption>Add an e-ticket</figcaption></figure>
     </div>
   </section>
 
@@ -304,5 +300,6 @@
 })();
 </script>
 <script src="/assets/site.js" defer></script>
+<script>(function(){try{if(matchMedia("(prefers-reduced-motion: reduce)").matches)document.querySelectorAll("video[autoplay]").forEach(function(v){v.removeAttribute("autoplay");v.pause()})}catch(e){}})();</script>
 </body>
 </html>
