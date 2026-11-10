@@ -6,19 +6,55 @@
 <title>Zalo Community Marketplace Case Study · Minh (Nora) Nguyen</title>
 <link rel="icon" type="image/webp" href="https://framerusercontent.com/images/r7KOQmPMssjx5nrZ70GzcocD2E8.webp?width=64&amp;height=64">
 <link rel="apple-touch-icon" href="https://framerusercontent.com/images/r7KOQmPMssjx5nrZ70GzcocD2E8.webp?width=180&amp;height=180">
-<meta name="description" content="What if Zalo Chat became our neighborhood's trusted community marketplace? A UX research and design concept.">
+<meta name="description" content="What if Zalo Chat became our neighborhood's trusted community marketplace? A UX research and design case study.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-/* Zalo: the deck is the hero; page chrome stays quiet */
-.deck{margin:8px auto 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#111;aspect-ratio:16/10}
-.deck iframe{display:block;width:100%;height:100%;border:0}
-.deck-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:12px}
-.deck-note a{text-decoration:underline;color:var(--ink)}
-.zl-cover{margin:8px auto 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fefdfc}
-.zl-cover video{display:block;width:100%;height:auto}
+/* Zalo: the site's quiet layout with Zalo blue as the only accent */
+:root{--zl:#0068ff}
+.zl .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.zl .stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.zl .stat b{display:block;font-size:clamp(34px,5vw,46px);font-weight:600;letter-spacing:-0.03em;line-height:1;margin-bottom:10px;color:var(--zl)}
+.zl .stat span{font-size:14.5px;color:var(--muted)}
+.zl .hmw{font-size:clamp(22px,3vw,30px);line-height:1.3;font-weight:500;letter-spacing:-0.02em;color:var(--ink);max-width:34ch;margin:24px 0 0;text-wrap:balance}
+.zl .hmw em{font-style:normal;color:var(--zl)}
+.zl .steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:20px}
+.zl .steps div{border-top:3px solid var(--zl);padding-top:10px;font-size:14px}
+.zl .steps small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-bottom:4px}
+.zl .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.zl .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.zl .box h3{font-size:16px;font-weight:600;margin:0 0 8px}
+.zl .box ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.zl .box li{margin-bottom:4px}
+.zl .aud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}
+.zl .aud div{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:18px}
+.zl .aud b{display:block;font-size:16px;margin-bottom:4px}
+.zl .aud span{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.zl .insights{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.zl .insights li{padding:12px 14px 12px 40px;background:var(--surface);border:1px solid var(--line);border-radius:12px;position:relative;color:var(--muted);font-size:15.5px}
+.zl .insights li::before{content:counter(i);counter-increment:i;position:absolute;left:14px;top:12px;font-family:var(--font-mono);font-size:12px;color:var(--zl)}
+.zl .insights{counter-reset:i}
+.zl .persona{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start;margin-top:20px}
+.zl .persona .cs-fig{margin:0}
+.zl .quote{font-size:clamp(19px,2.4vw,22px);line-height:1.55;color:var(--ink);border-left:3px solid var(--zl);padding-left:18px;margin:16px 0 0;max-width:62ch}
+.zl .hmws{display:grid;gap:12px;margin-top:20px}
+.zl .hmws>div{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.zl .hmws .c{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:14.5px;color:var(--muted)}
+.zl .hmws .c small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--zl);margin-bottom:6px;text-transform:uppercase}
+.zl .hmws .c b{color:var(--ink);font-weight:600}
+.zl .flows{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.zl .flows li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.zl .phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:18px;align-items:start}
+.zl .phones img{width:100%;height:auto;display:block;border-radius:18px}
+.zl .phones .gif{outline:2px solid var(--zl);outline-offset:3px;border-radius:20px}
+.zl .feat{margin-top:56px}
+.zl .feat h3{font-size:19px;font-weight:600;margin:0}
+.zl .feat p{margin:6px 0 0}
+.zl .sugg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.zl .cs-fig figcaption{text-align:center}
+@media (max-width:760px){.zl .stats,.zl .two,.zl .aud,.zl .persona,.zl .hmws>div,.zl .flows,.zl .sugg{grid-template-columns:1fr}.zl .steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -36,38 +72,177 @@
   </div>
 </nav>
 
-<main>
+<main class="zl">
   <div class="col">
     <a class="back" href="/">← Back to Works</a>
     <header class="cs-head">
       <div class="meta-line"><span class="date">Sep 2, 2026 · Case study</span></div>
       <h1 style="font-size:clamp(32px,5vw,46px);line-height:1.08;font-weight:600;letter-spacing:-0.025em;margin:12px 0 0;text-wrap:balance">What if Zalo Chat became our neighborhood's trusted community marketplace?</h1>
-      <p class="lede">A concept study: neighbors already buy and sell in Zalo group chats. I explored how Zalo could turn those posts into listings, orders and delivery tracking, without leaving the chat.</p>
+      <p class="lede">A 3-month UX project supported by Mirr Design: researching how apartment residents in Vietnam buy, sell and exchange in Zalo groups, then designing and testing a better way to do it inside the chat.</p>
       <dl class="cs-meta">
-        <div><dt>Type</dt><dd>Concept, self-initiated</dd></div>
-        <div><dt>Role</dt><dd>UX researcher, UX/UI designer</dd></div>
-        <div><dt>Methods</dt><dd>User interviews, UX research, prototyping</dd></div>
-        <div><dt>Tools</dt><dd>Figma</dd></div>
+        <div><dt>Timeline</dt><dd>Oct 2024 to Jan 2025</dd></div>
+        <div><dt>Role</dt><dd>UX/UI Designer in training</dd></div>
+        <div><dt>Skills</dt><dd>UX research, usability testing, wireframing</dd></div>
+        <div><dt>Team</dt><dd>2 designers, mentored by Mirr Design</dd></div>
       </dl>
     </header>
   </div>
-  <div class="zl-cover cs-wide"><video src="/thumbs/zalo.mp4" poster="/thumbs/zalo.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" aria-label="Animated Zalo marketplace screens: group listings, message actions and order tracking"></video></div>
+  <div class="cs-cover cs-wide" style="background:#fefdfc"><video src="/thumbs/zalo.mp4" poster="/thumbs/zalo.jpg" width="1200" height="838" autoplay muted loop playsinline preload="metadata" style="display:block;width:100%;height:auto" aria-label="Animated Zalo marketplace screens"></video></div>
+
+  <section class="cs-sec col">
+    <div class="num">01 · Challenge</div>
+    <h2>70 million users, and a very messy group chat</h2>
+    <p>With 70+ million users, Zalo is a huge opportunity for shop owners, local communities and small businesses to connect and trade. But managing community interactions is hard: people struggle with the sheer volume of daily group messages, messy photos, and no real way to follow up.</p>
+    <p class="hmw">How can we change the way people in residential areas <em>buy and sell</em>, with a seamless peer-to-peer experience inside the Zalo groups they already trust?</p>
+  </section>
+
+  <section class="cs-sec col">
+    <div class="num">02 · Process</div>
+    <h2>Design thinking, over three months</h2>
+    <div class="steps">
+      <div><small>Oct 2024</small>Generative research</div>
+      <div><small>Nov 2024</small>Interviewing</div>
+      <div><small>Dec 2024</small>Personas &amp; real problems</div>
+      <div><small>W1 Jan 2025</small>Ideation &amp; user flows</div>
+      <div><small>W2 Jan 2025</small>Wireframes &amp; prototype</div>
+      <div><small>W3 Jan 2025</small>Testing</div>
+    </div>
+  </section>
+
+  <section class="cs-sec col">
+    <div class="num">03 · Research</div>
+    <h2>First findings</h2>
+    <div class="stats">
+      <div class="stat"><b>82%</b><span>of Vietnamese users named Zalo their most preferred network for messaging, calls and utilities</span></div>
+      <div class="stat"><b>$5B</b><span>projected value of Vietnam's secondhand market in 2026, up from $1.1B today</span></div>
+      <div class="stat"><b>30%</b><span>minimum savings people can expect buying secondhand, even when items are 99% new</span></div>
+    </div>
+    <div class="two">
+      <div class="box"><h3>Research goals</h3><ul><li>Understand user behavior and pain points</li><li>Evaluate existing features and experience</li><li>Define requirements for new features</li></ul></div>
+      <div class="box"><h3>Research focus</h3><ul><li>People who have bought or sold in Zalo or Facebook groups, or other P2P channels</li><li>50+ interview questions across platforms</li><li>8 in-depth user interviews</li></ul></div>
+    </div>
+  </section>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-db39ec1faa243baf53f977eac2ebc3a8c4eeaa3d/w=2400" loading="lazy" alt="Affinity diagram of interview notes"></div>
+    <figcaption><b>Affinity diagram</b>Interview notes grouped into themes.</figcaption>
+  </figure>
+
+  <section class="cs-sec col">
+    <div class="num">04 · Insights</div>
+    <h2>What we heard</h2>
+    <div class="aud">
+      <div><b>Young professionals</b><span>25 to 35</span></div>
+      <div><b>Busy parents</b><span>30 to 45</span></div>
+      <div><b>Small business owners</b><span>25 to 50</span></div>
+    </div>
+    <ol class="insights">
+      <li>Zalo groups are mainly used for building updates and announcements.</li>
+      <li>Users find it hard to locate what they need in the chat.</li>
+      <li>Trust in product quality and sellers is low.</li>
+      <li>The current interface isn't built for buying and selling.</li>
+      <li>There is strong potential for Zalo to become an internal marketplace.</li>
+      <li>Users want seller ratings, transparent payment, order tracking, reviews and safe handling of personal data.</li>
+    </ol>
+  </section>
+
+  <section class="cs-sec col">
+    <div class="num">05 · Persona</div>
+    <h2>Meet Thùy Nhiên</h2>
+    <div class="persona">
+      <figure class="cs-fig"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-240842e0d6aca367b0594c9b99ef2f9f585111cd/w=1506" loading="lazy" alt="Persona Thuy Nhien"></div></figure>
+      <div>
+        <p>A 28-year-old office worker in a busy apartment complex who loves hidden gems and good deals. Her building's Zalo group was meant for community news, but it has become a chaotic free-for-all.</p>
+        <p>When a neighbor posted a secondhand item, she was excited, until an hour later she tried to find the post again and got lost scrolling. She wants the chat to feel less like a source of anxiety and more like a simple marketplace with her neighbors.</p>
+      </div>
+    </div>
+    <p class="quote">"I'm tired of scrolling through countless messages and messy images just to find what I need. I want a simple, reliable way to shop in my community, at a fair price, without worrying about the risks."</p>
+  </section>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-42d718b139bc838ab0b0d5603c27f56bf3e5f163/w=2400" loading="lazy" alt="Thuy Nhien's user journey map"></div>
+    <figcaption><b>User journey</b>Where the experience breaks down today.</figcaption>
+  </figure>
+
+  <section class="cs-sec col">
+    <div class="num">06 · Problems → ideas</div>
+    <h2>Three problems, three directions</h2>
+    <div class="hmws">
+      <div><div class="c"><small>Problem</small><b>Clunky shopping.</b> Finding products, comparing prices and completing a deal in a group chat is inconvenient.</div><div class="c"><small>How might we</small>make product discovery, talking to sellers and paying feel seamless inside Zalo groups?</div><div class="c"><small>Idea</small>Better seller chat, smart search, and a streamlined checkout with order tracking.</div></div>
+      <div><div class="c"><small>Problem</small><b>Thin product info.</b> A photo and a line of text isn't enough; people want details, reviews and proof of origin.</div><div class="c"><small>How might we</small>give buyers complete, trustworthy product information?</div><div class="c"><small>Idea</small>Full product pages with images, video, reviews and origin verification.</div></div>
+      <div><div class="c"><small>Problem</small><b>Low trust.</b> Buyers worry about fakes, poor quality and scams.</div><div class="c"><small>How might we</small>make sellers and products credible and transparent?</div><div class="c"><small>Idea</small>Ratings, seller verification, buyer protection and community feedback.</div></div>
+    </div>
+  </section>
+
+  <section class="cs-sec">
+    <div class="col"><div class="num">07 · Structure</div><h2>Card sorting and user flows</h2></div>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-5ae3e2368b4980fd1da032ec889e34af59c0019b/w=2400" loading="lazy" alt="Card sorting results"></div>
+    <figcaption><b>Card sorting</b></figcaption>
+  </figure>
+    <div class="col">
+      <ul class="flows">
+        <li>1. Search for products in messages or the group marketplace</li><li>2a. Buy any product</li>
+        <li>2b. Make a payment</li><li>3. Create or view thread messages</li>
+        <li>4a. View a seller's profile</li><li>4b. Chat with a seller</li>
+        <li>5. Review and rate a purchased order</li>
+      </ul>
+    </div>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-a8cb7e4bcf0fae4f00849d999b69114bc71a4934/w=3024" loading="lazy" alt="Main user flows"></div>
+    <figcaption><b>Main user flows</b></figcaption>
+  </figure>
+  </section>
+
+  <section class="cs-sec">
+    <div class="col"><div class="num">08 · Lo-fi</div><h2>Our first lo-fi wireframes</h2><p>A quick first pass to test the structure. Not detailed enough for usability testing, so we moved to hi-fi.</p></div>
+    <div class="cs-wide" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px;align-items:start">
+      <figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-6ecae9612668d050cead3ee69c411e44473942ae/w=2400" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-29a37d91a9862ff198059af5c3126b3695cef79f/w=2400" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-c6d2cf1290d06cd60ee4aa88cbf5092fbafb4587/w=1988" loading="lazy" alt="Lo-fi wireframe"></div></figure><figure class="cs-fig" style="margin:0"><div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-29751f2f15def6eaec71f3dfd08aaafea071da5b/w=678" loading="lazy" alt="Lo-fi wireframe"></div></figure>
+    </div>
+  </section>
 
   <section class="cs-sec">
     <div class="col">
-      <div class="num">Full case study</div>
-      <h2>The deck</h2>
-      <p>Use the arrows or click inside the deck to move through the slides. Press the expand button for full screen.</p>
+      <div class="num">09 · Hi-fi</div>
+      <h2>Final hi-fi wireframes</h2>
+      <p>Hi-fi screens that mirror Zalo's UI and signature colors, with real imagery so they were ready for testing. Four key flows show the most impactful features. Outlined screens are animated.</p>
     </div>
-    <div class="deck cs-wide">
-      <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fdeck%2FTiw4mp7Z3jfCNdAE9N0gpl" title="Zalo Community Marketplace case study deck in Figma" loading="lazy" allowfullscreen></iframe>
+    <div class="cs-wide">
+      <div class="feat"><h3>Talk to sellers in thread chats</h3><div class="phones"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-14c6826371adfa070e7601023d967dc72f2c6623/public" loading="lazy" alt="Thread chat screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-794076984f8e0dfab85ed74e509f6a7c6d90165e/public" loading="lazy" alt="Thread chat screen"><img src="https://zalouxcase.figweb.site/__assets/8533ebe952fb7052507985b45f127ee1baa44b90" loading="lazy" alt="Animated: viewing a thread" class="gif"></div></div>
+      <div class="feat"><h3>Quickly search for any product</h3><div class="phones"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-9c3a69c1871b3a39fec3c4378f9512b96aa81161/public" loading="lazy" alt="Search screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-5b79db661d208e2ef8e1183b50ca97365e0e4b6e/public" loading="lazy" alt="Search screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-41dd43716e52034d11920748d3cb2a3538046d83/public" loading="lazy" alt="Search screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-40c683bcc96e8f5b5e971b5a2b6582ba01e3de92/public" loading="lazy" alt="Search screen"><img src="https://zalouxcase.figweb.site/__assets/eebc39be5c12803d687cfb81710128c74d0beac0" loading="lazy" alt="Animated: search" class="gif"></div></div>
+      <div class="feat"><h3>Buy within three taps</h3><div class="phones"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-6afe4330bdd317913d74e824f21a802e564fd907/public" loading="lazy" alt="Buy screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-62b684430a3dbbf6a1ced8ba173becabc1a14247/public" loading="lazy" alt="Buy screen"><img src="https://zalouxcase.figweb.site/__assets/b04ebf38b940487f88e5f361ce4870fe811abdbd" loading="lazy" alt="Animated: buying" class="gif"></div></div>
+      <div class="feat"><h3>Track orders and leave trusted reviews</h3><div class="phones"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-a8e1620d8649328efab86f2b3bf5685664c374e3/public" loading="lazy" alt="Order screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-f46728eb3b60b297ddcaf9ecc6baa62309e04b32/public" loading="lazy" alt="Order screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-20a6f17f1180f81ca4e7218f0eef568b755a1455/public" loading="lazy" alt="Order screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-a808c766c2a178680da4f20a95de82591d2ba753/public" loading="lazy" alt="Review screen"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-610d963769b4cf8464c1782d0ecaab13e206942c/public" loading="lazy" alt="Review screen"><img src="https://zalouxcase.figweb.site/__assets/b38d7269a2e6488c78cf561c618eacdbaf2a9cb1" loading="lazy" alt="Animated: orders and reviews" class="gif"></div></div>
     </div>
-    <p class="deck-note">Deck not loading? <a href="https://www.figma.com/deck/Tiw4mp7Z3jfCNdAE9N0gpl" rel="noopener">Open it in Figma ↗</a> · <a href="https://zalouxcase.figweb.site/" rel="noopener">Read the web version ↗</a></p>
   </section>
 
-  <div class="col">
+  <section class="cs-sec">
+    <div class="col"><div class="num">10 · Usability testing</div><h2>What testing taught us</h2></div>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-fb8c79e0a7af3b8cade59dfc50cca00cea40260c/w=2430" loading="lazy" alt="Usability testing results"></div>
+    <figcaption><b>Usability testing</b></figcaption>
+  </figure>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="https://zalouxcase.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/zalouxcase.figweb.site-558fbe451c73c5f6d1572b4cea532f7083a3bb28/w=2430" loading="lazy" alt="Usability testing findings"></div>
+    <figcaption><b>Findings</b></figcaption>
+  </figure>
+    <div class="col">
+      <div class="sugg">
+        <div class="box"><h3>Trust and security</h3><ul><li>Stronger user protection policies</li><li>An interface that inspires confidence when buying and selling</li></ul></div>
+        <div class="box"><h3>Product information</h3><ul><li>A "Call" button on product pages, like Chợ Tốt</li><li>Simpler, less overwhelming filters</li></ul></div>
+        <div class="box"><h3>Intuitive interface</h3><ul><li>A clearer icon for "Buy" than the shopping cart</li><li>Consistent star ratings</li></ul></div>
+        <div class="box"><h3>Clear, friendly content</h3><ul><li>Easy, welcoming copy</li><li>Clear wording on shipping responsibility</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-sec col">
+    <div class="num">11 · Takeaways</div>
+    <h2>What I learned</h2>
+    <div class="cs-out">
+      <div><h3>Research to story</h3><p>Hands-on research, interviewing, testing and storytelling, with guidance from mentors at Mirr Design.</p></div>
+      <div><h3>UX is the whole journey</h3><p>Good UX covers everything from first discovery to the review after delivery, not just screens.</p></div>
+      <div><h3>Teamwork</h3><p>Working closely with a teammate sharpened how we split work and decide together.</p></div>
+    </div>
     <div class="cs-end"><a href="/">← Back to Works</a><a href="/pocketplus/">Next: Pocketplus →</a></div>
-  </div>
+  </section>
 </main>
 
 <footer>
