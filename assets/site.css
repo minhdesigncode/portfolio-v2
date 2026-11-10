@@ -219,7 +219,7 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
 .friends{margin-top:28px;display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;overflow:hidden}
 .friends .lbl{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap;flex:none}
 .marquee{flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.track{display:flex;gap:10px;width:max-content;animation:slide 28s linear infinite}
+.track{display:flex;align-items:center;gap:28px;padding-right:28px;width:max-content;animation:slide 28s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 .track>*{flex:none;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;white-space:nowrap}
 .tool{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px 4px 4px;line-height:1}
@@ -230,3 +230,6 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{animation:none}}
 @media (max-width:560px){.friends{flex-direction:column;align-items:flex-start;gap:8px}.marquee{width:100%}}
+
+.track .logo{height:24px;width:auto;display:block}
+.track .slogan{padding:0}
