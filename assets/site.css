@@ -233,3 +233,7 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
 
 .track .logo{height:24px;width:auto;display:block}
 .track .slogan{padding:0}
+.track .grp{display:inline-flex;align-items:center;gap:14px}
+.track .dot{width:5px;height:5px;border-radius:50%;background:var(--muted);opacity:.6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .track .grp img[src*="github"],:root:not([data-theme="light"]) .track .grp img[src*="guitar"],:root:not([data-theme="light"]) .track .grp img[src*="running"],:root:not([data-theme="light"]) .track .grp img[src*="hiking"]{filter:invert(1)}}
+:root[data-theme="dark"] .track .grp img[src*="github"],:root[data-theme="dark"] .track .grp img[src*="guitar"],:root[data-theme="dark"] .track .grp img[src*="running"],:root[data-theme="dark"] .track .grp img[src*="hiking"]{filter:invert(1)}
