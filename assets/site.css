@@ -183,3 +183,17 @@ a.shot:hover img,a.shot:hover video{transform:scale(1.015)}
 .cs-split .cs-card li{margin-bottom:4px}
 .cs-quote{margin:28px 0 0;padding:4px 0 4px 18px;border-left:3px solid var(--accent);font-size:19px;line-height:1.45;font-weight:500;letter-spacing:-0.01em;color:var(--ink);max-width:56ch}
 @media (max-width:760px){.cs-grid2,.cs-split{grid-template-columns:1fr}}
+
+/* Case study: two-level IA cards, 2-up figure grid */
+.cs-ia{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.cs-ia .lvl{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.cs-ia .where{font-family:var(--font-mono);font-size:11px;color:var(--accent);margin-bottom:8px}
+.cs-ia h3{font-size:17px;font-weight:600;margin:0 0 4px}
+.cs-ia .who{font-size:14px;color:var(--muted);margin:0 0 12px}
+.cs-ia ul{margin:0;padding:0;list-style:none;font-size:14.5px}
+.cs-ia li{padding:7px 0;border-top:1px solid var(--line)}
+.cs-ia li span{color:var(--muted)}
+.cs-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;align-items:start}
+.cs-grid2 .cs-fig{margin:0}
+.cs-pull{margin:28px 0 0;padding:4px 0 4px 18px;border-left:3px solid var(--accent);font-size:19px;line-height:1.45;font-weight:500;color:var(--ink);max-width:56ch}
+@media (max-width:760px){.cs-ia,.cs-grid2{grid-template-columns:1fr}}

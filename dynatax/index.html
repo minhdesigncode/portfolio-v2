@@ -33,11 +33,11 @@
     <header class="cs-head">
       <div class="meta-line"><span class="date">Sep 7, 2026 · Case study</span></div>
       <h1 style="font-size:clamp(32px,5vw,46px);line-height:1.08;font-weight:600;letter-spacing:-0.025em;margin:12px 0 0;text-wrap:balance">Untangling settings for a vibe-coded tax platform</h1>
-      <p class="lede">How we turned DynaTax’s fragmented settings into two clear homes, one for the person and one for the business, on a US platform that connects business owners with tax pros.</p>
+      <p class="lede">How we turned DynaTax's fragmented settings into two clear levels, Account and Business, for a US platform that connects small business owners with freelance tax pros.</p>
       <dl class="cs-meta">
         <div><dt>Client</dt><dd>DynaTax AI, US TaxTech</dd></div>
         <div><dt>Role</dt><dd>Product Designer (Freelance)</dd></div>
-        <div><dt>Team</dt><dd>With the reLab product design team</dd></div>
+        <div><dt>Team</dt><dd>With reLab product design team</dd></div>
         <div><dt>Epic</dt><dd>Settings: Account, Business, Billing, Onboarding</dd></div>
       </dl>
     </header>
@@ -46,152 +46,181 @@
 
   <section class="cs-sec col">
     <div class="num">01 · Overview</div>
-      <h2>One platform, two kinds of users</h2>
-      <p>DynaTax helps US businesses run their bookkeeping and tax work. It serves two account types: <strong>business owners</strong> (truckers, nail salons, freelancers, small businesses) and <strong>tax pros</strong>, the freelance CPAs who prepare their taxes. An internal community connects the two, so owners can find help and tax pros can find clients.</p>
-    <div class="chips"><span>Business owner accounts</span><span>Tax Pro accounts</span><span>Internal community</span><span>AI bookkeeping</span></div>
+    <h2>Bookkeeping, tax work and a community in one place</h2>
+    <p>DynaTax manages accounting and tax work for small businesses in the US. It is also a community: a place where business owners, from truckers to nail salon owners and freelancers, meet freelance CPAs and tax pros who can help them.</p>
+    <div class="cs-cards" style="grid-template-columns:1fr 1fr">
+      <div class="cs-card"><div class="k">Account type 1</div><h3>Business owner</h3><p>Runs one or more businesses, keeps books IRS-ready, finds a tax pro when needed.</p></div>
+      <div class="cs-card"><div class="k">Account type 2</div><h3>Tax pro</h3><p>Freelance CPA or tax professional who manages clients and builds a reputation in the community.</p></div>
+    </div>
   </section>
 
   <section class="cs-sec">
     <div class="col">
       <div class="num">02 · Challenge</div>
-      <h2>We inherited a vibe-coded product</h2>
-      <p>DynaTax’s dev team had built the whole platform with AI, from the founder’s ideas and AI-generated docs. It worked, but it wasn’t designed. Our job was to revamp it into a web product that actually holds up.</p>
-      <div class="cs-cards">
-        <div class="cs-card"><div class="k">Structure</div><h3>Two levels, one page</h3><p>Personal account settings and organization settings were mixed together in one tab bar, though they belong to different levels.</p></div>
-        <div class="cs-card"><div class="k">Scale</div><h3>Many businesses per person</h3><p>One owner might run an LLC, a trucking business and a 1099 side gig, each with its own plan and data.</p></div>
-        <div class="cs-card"><div class="k">Fit</div><h3>One layout for everyone</h3><p>A trucker and a nail salon owner track very different things, but saw the same product.</p></div>
-      </div>
+      <h2>We inherited a fully vibe-coded product</h2>
+      <p>The DynaTax dev team had built the platform with AI, from the founder's idea and AI-generated docs. It worked, but it wasn't designed. Our job was to revamp it into a web product that is actually easy to use. Our epic was Settings.</p>
+      <p class="cs-pull">Settings mixed two different levels: the person and the business. Organization settings and account settings sat side by side in one tab bar.</p>
     </div>
   <figure class="cs-fig cs-wide">
-    <div class="frame"><img src="/dynatax/assets/before-client-settings.jpg" width="1910" height="934" loading="lazy" alt="The vibe-coded Client Settings page next to the team’s sticky-note audit"></div>
-    <figcaption><b>Starting point</b>The vibe-coded Client Settings with our audit notes. Personal contact details are blurred.</figcaption>
+    <div class="frame"><img src="/dynatax/assets/before-client-settings.jpg" width="1910" height="934" loading="lazy" alt="The original vibe-coded Client Settings page with the team audit notes on sticky notes"></div>
+    <figcaption><b>Starting point</b>The vibe-coded Client Settings we inherited, with our audit notes on the right.</figcaption>
   </figure>
+    <div class="col">
+      <div class="cs-cards">
+        <div class="cs-card"><div class="k">Fragmented</div><h3>Two levels, one page</h3><p>Profile, Organizations, Billing and Community shared one tab bar, so it was unclear what applied to you and what applied to your business.</p></div>
+        <div class="cs-card"><div class="k">Multi-entity</div><h3>Many businesses, no home</h3><p>Owners with an LLC, a 1099 side business and a trucking company had no clear place to switch, compare or set a default.</p></div>
+        <div class="cs-card"><div class="k">Compliance</div><h3>Hidden blockers</h3><p>Plan limits, missing entity details and unverified identity quietly blocked tax filing.</p></div>
+      </div>
+    </div>
   </section>
 
   <section class="cs-sec">
     <div class="col">
       <div class="num">03 · Research</div>
-      <h2>Learning from TaxDome, Xero and tax communities</h2>
-      <p>Since our epic was Settings, we focused there. We studied TaxDome, Xero and QuickBooks, plus tax communities on Reddit, to see how mature products separate the person from the business.</p>
-      <p class="cs-quote">Xero was the closest match: it keeps organization settings and user settings at clearly different levels. It became our main reference.</p>
+      <h2>Learning from TaxDome, Xero and QuickBooks</h2>
+      <p>We studied tax and accounting platforms (TaxDome, Xero, QuickBooks) and tax communities such as Reddit's tax forums. Xero became our main reference: it is very close to DynaTax and handles the split between organization settings and account settings especially well.</p>
     </div>
   <figure class="cs-fig cs-wide">
     <div class="frame"><img src="/dynatax/assets/ia-benchmark.jpg" width="2212" height="972" loading="lazy" alt="Side by side settings IA for DynaTax Tax Pro and TaxDome with goal notes above each group"></div>
-    <figcaption><b>Benchmark</b>DynaTax Tax Pro settings next to TaxDome’s, with one goal per settings group.</figcaption>
+    <figcaption><b>Benchmark</b>DynaTax Tax Pro settings (left) mapped against TaxDome (right), with one goal per group.</figcaption>
+  </figure>
+  <figure class="cs-fig cs-wide">
+    <div class="frame"><img src="/dynatax/assets/process-files.jpg" width="2000" height="805" loading="lazy" alt="Figma project folder with files for research, wireframes, Setting and Community epics, UI Kit 2.0 and Brandbook"></div>
+    <figcaption><b>Workspace</b>Our Figma workspace with reLab: research, wireframes, the Setting and Community epics, UI Kit 2.0 and the brandbook.</figcaption>
   </figure>
   </section>
 
   <section class="cs-sec">
     <div class="col">
       <div class="num">04 · Information architecture</div>
-      <h2>Split the person from the business</h2>
-      <p>Once the IA was agreed, we gave each level its own entry point, so users always know whether a change affects them or their whole business.</p>
-      <div class="cs-split">
-        <div class="cs-card"><div class="k">Avatar · bottom left</div><h3>Account settings</h3><p>About you, across every business you belong to.</p>
-          <ul><li>Personal information</li><li>Business management (your organizations)</li><li>Billing &amp; invoices across businesses</li><li>Account verification</li><li>Account security</li><li>Notification setup</li><li>Community alias and profile</li></ul></div>
-        <div class="cs-card"><div class="k">Business switcher · top right</div><h3>Business settings</h3><p>About one organization, shared by its team.</p>
-          <ul><li>Organization overview: name, logo, community profile</li><li>Industry setting</li><li>Pricing plan &amp; subscription</li><li>Usage meters, payment methods, invoices</li><li>Team members &amp; roles</li><li>Integrations</li></ul></div>
+      <h2>Two levels, two entry points</h2>
+      <p>Once the IA was agreed, we split settings in two. Anything about you lives under your avatar at the bottom left. Anything about the business lives at the top right, next to the business switcher.</p>
+      <div class="cs-ia">
+        <div class="lvl">
+          <div class="where">Avatar · bottom left</div>
+          <h3>Account settings</h3>
+          <p class="who">About the person</p>
+          <ul>
+            <li>Personal information <span>· name, contact, address, tax info</span></li>
+            <li>Business management <span>· all your businesses</span></li>
+            <li>Billing &amp; invoices <span>· across businesses</span></li>
+            <li>Account verification <span>· email, phone, identity</span></li>
+            <li>Account security <span>· password, 2FA</span></li>
+            <li>Notification setup <span>· SMS, digest, quiet hours</span></li>
+            <li>Community alias <span>· how you appear</span></li>
+          </ul>
+        </div>
+        <div class="lvl">
+          <div class="where">Business switcher · top right</div>
+          <h3>Business settings</h3>
+          <p class="who">About one business</p>
+          <ul>
+            <li>Organization overview <span>· name, logo, community profile</span></li>
+            <li>Industry <span>· trucker, small business, freelancer</span></li>
+            <li>Pricing plan &amp; subscription</li>
+            <li>Usage meters <span>· AI queries, documents, storage</span></li>
+            <li>Payment methods &amp; invoices</li>
+            <li>Team members &amp; roles</li>
+          </ul>
+        </div>
       </div>
     </div>
   <figure class="cs-fig col">
     <div class="frame"><img src="/dynatax/assets/ia-user-settings.jpg" width="2000" height="1841" loading="lazy" alt="Final User Settings information architecture tree"></div>
-    <figcaption><b>Final IA</b>The account settings tree, with organizations, entities and billing nested per business.</figcaption>
-  </figure>
-  <figure class="cs-fig cs-wide">
-    <div class="frame"><img src="/dynatax/assets/ia-documents.jpg" width="1482" height="1012" loading="lazy" alt="Documents IA, current on the left and revised flatter version on the right"></div>
-    <figcaption><b>Same thinking, applied to Documents</b>Nested folders flattened into All Documents, Shared with me, My Upload, Trash and Folders.</figcaption>
+    <figcaption><b>Final IA</b>The account-level settings tree.</figcaption>
   </figure>
   </section>
 
   <section class="cs-sec">
     <div class="col">
-      <div class="num">05 · Onboarding</div>
-      <h2>A layout for each kind of business</h2>
-      <p>During onboarding, owners answer a short survey that places them in a segment: trucker, nail salon, freelancer, small business. The industry they pick unlocks the right tools, like per diem and IFTA for truckers or quarterly estimates for 1099 contractors. Owners can change it later in Business settings.</p>
+      <div class="num">05 · Onboarding &amp; industry</div>
+      <h2>Different businesses, different layouts</h2>
+      <p>During registration, a short survey asks what kind of business you run, such as trucking, a nail salon or freelance work. The answer sets the industry, which decides the features and layout you get: per diem and IFTA for truckers, invoicing for small businesses, quarterly estimates for 1099 contractors.</p>
     </div>
   <figure class="cs-fig cs-wide">
-    <div class="frame"><img src="/dynatax/assets/ui-create-business.jpg" width="2000" height="1293" loading="lazy" alt="Create New Business modal asking for business name and industry"></div>
-    <figcaption><b>Create business</b>Industry is required, because it decides which features and layout the business gets.</figcaption>
+    <div class="frame"><img src="/dynatax/assets/ui-create-business.jpg" width="2000" height="1293" loading="lazy" alt="Create New Business modal with industry options: Trucker, Small Business, Freelancer"></div>
+    <figcaption><b>Create business</b>Industry is picked up front, so each business starts with the right tools.</figcaption>
   </figure>
-  </section>
-
-  <section class="cs-sec">
     <div class="col">
-      <div class="num">06 · Flows &amp; wireframes</div>
-      <h2>Organizations, end to end</h2>
-      <p>Every path from an organization card: manage plan, compare plans, view usage and invoices, or create a new organization.</p>
+      <p style="margin-top:28px">The same flow, wireframed end to end for organizations: manage plan, compare plans, view usage and invoices, or create a new one.</p>
     </div>
   <figure class="cs-fig col">
     <div class="frame"><img src="/dynatax/assets/wireframe-organizations.jpg" width="1446" height="1308" loading="lazy" alt="Wireframe flow connecting Organizations, Available Plans, Subscription and Billing, and Create Organization"></div>
-    <figcaption><b>Wireframe flow</b>Organizations → Available Plans → Subscription &amp; Billing → Create Organization.</figcaption>
+    <figcaption><b>Wireframes</b>Organizations → Available Plans → Subscription &amp; Billing → Create Organization.</figcaption>
   </figure>
   </section>
 
   <section class="cs-sec cs-wide">
-    <div class="num">07 · Account settings</div>
-      <h2>Everything about you, from the avatar</h2>
-      
+    <div class="num">06 · Account settings</div>
+    <h2>Everything about you, one click from your avatar</h2>
     <div class="cs-feature">
-      <div><h3>One menu, status at a glance</h3><p>The avatar menu shows how many businesses you run and whether you are verified before you open a page.</p><ul><li>Business count under Business Management</li><li>“Not verified” under Verification</li></ul></div>
+      <div><h3>Account menu</h3><p>A slide-out menu shows status at a glance before you open a page.</p><ul><li>Business count under Business Management</li><li>"Not verified" under Verification</li></ul></div>
       <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-account-menu.jpg" width="2400" height="1775" loading="lazy" alt="Dashboard with the account settings menu open"></div></figure>
     </div>
     <div class="cs-feature">
-      <div><h3>Personal information</h3><p>Each field is its own row with its own Edit. Verification sits next to the data it checks.</p><ul><li>Inline “Verify now” for email and phone</li><li>Community alias sets how you appear in the community</li><li>Tax info: SSN, filing status, dependents</li></ul></div>
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-personal-info.jpg" width="2400" height="1551" loading="lazy" alt="Personal Information page with unverified email and phone badges"></div></figure>
+      <div><h3>Personal information</h3><p>Verification sits next to the data it checks, and the community alias is set right here.</p><ul><li>Inline "Verify now" per field</li><li>Tax info: SSN, filing status, dependents</li></ul></div>
+      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-personal-info-v2.jpg" width="2000" height="1293" loading="lazy" alt="Personal Information page with unverified email and phone badges"></div></figure>
     </div>
     <div class="cs-feature">
-      <div><h3>Verify in place</h3><p>A six-digit code confirms email or phone without leaving the page.</p><ul><li>Resend with a 30s cooldown</li><li>One clear Verify action</li></ul></div>
+      <div><h3>Verify in place</h3><p>A 6-digit code confirms email or phone without leaving the page.</p><ul><li>Resend with a 30s timer</li><li>One clear primary action</li></ul></div>
       <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-verify-otp.jpg" width="2000" height="1293" loading="lazy" alt="Verification code modal over the Personal Information page"></div></figure>
     </div>
     <div class="cs-feature">
-      <div><h3>Business management</h3><p>Every business you belong to, with your role and its plan. Problems show inline, each with one fix.</p><ul><li>Plan limit warning → Upgrade Plan</li><li>Missing entity → Setup Entity</li><li>Set default or remove</li></ul></div>
+      <div><h3>Business management</h3><p>Every business you own or belong to, with role, owner, members and industry. Problems show inline, each with one fix.</p><ul><li>Plan limit → Upgrade Plan</li><li>Missing entity → Setup Entity</li><li>Set a default business</li></ul></div>
       <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-business-management.jpg" width="2400" height="1551" loading="lazy" alt="Business Management page with plan limit and entity setup warnings"></div></figure>
     </div>
     <div class="cs-feature">
-      <div><h3>All billing</h3><p>One table for every subscription you pay for, across all your businesses.</p><ul><li>Filter by plan and payment status</li><li>View detail, change plan, cancel</li></ul></div>
+      <div><h3>All billing</h3><p>One table for every subscription across your businesses.</p><ul><li>Status chips: Due soon, Processing, Paid</li><li>View detail, change plan, cancel</li></ul></div>
       <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-all-billing.jpg" width="2000" height="1157" loading="lazy" alt="All Billing table listing businesses, subscriptions, payment status and price"></div></figure>
     </div>
     <div class="cs-feature">
-      <div><h3>Safe logout</h3><p>Logging out during a bank sync or AI report could lose data, so waiting is the default.</p><ul><li>Primary: Wait &amp; Close</li><li>Secondary: Log out anyway</li></ul></div>
+      <div><h3>Safe logout</h3><p>Logging out mid bank sync or AI report could lose data, so waiting is the default.</p><ul><li>Primary: Wait &amp; Close</li><li>Secondary: Log out anyway</li></ul></div>
       <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-logout-guard.jpg" width="2400" height="1775" loading="lazy" alt="Syncing in progress dialog warning that logging out interrupts active tasks"></div></figure>
     </div>
   </section>
 
   <section class="cs-sec cs-wide">
-    <div class="num">08 · Business settings</div>
-      <h2>Everything about one organization, from the top right</h2>
-      
+    <div class="num">07 · Business settings</div>
+    <h2>Plans, usage and payments for each business</h2>
     <div class="cs-feature">
-      <div><h3>Plan, usage and payments</h3><p>One page answers the questions owners ask most: what am I paying, how much have I used, and how do I pay.</p><ul><li>Current plan with features and Upgrade</li><li>Usage meters that warn before limits hit</li><li>Payment methods and invoice history</li></ul></div>
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-org-billing.jpg" width="2000" height="1169" loading="lazy" alt="Pricing Plans page with current plan, usage meters, payment methods and invoice history"></div></figure>
+      <div><h3>Pricing plan &amp; usage</h3><p>The current plan, what it includes and how much is left, in one view. Meters turn yellow and red before limits are hit.</p><ul><li>Usage meters reset monthly</li><li>Payment methods per business</li><li>Invoice history with export</li></ul></div>
+      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ui-org-billing.jpg" width="2000" height="1169" loading="lazy" alt="Business billing page with Pro Plus plan, usage meters, payment methods and invoice history"></div></figure>
     </div>
   </section>
 
   <section class="cs-sec">
     <div class="col">
-      <div class="num">09 · Design system</div>
+      <div class="num">08 · Design system</div>
       <h2>Built on DynaTax UI Kit 2.0</h2>
-      <p>Every screen uses the shared UI Kit we maintained with reLab: global color tokens, an Inter type scale, and components like buttons and metric cards with full state coverage.</p>
+      <p>Every screen uses the shared UI Kit we maintained with reLab: global color tokens, an Inter type scale, button states and data components like metric cards.</p>
     </div>
     <div class="cs-grid2 cs-wide">
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ds-colors.jpg" width="1452" height="892" loading="lazy" alt="Global color tokens in light and dark"></div><figcaption><b>Color tokens</b>Light and dark ramps</figcaption></figure>
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ds-typography.jpg" width="1408" height="1174" loading="lazy" alt="Typography tokens for display styles"></div><figcaption><b>Typography</b>Inter display and text scale</figcaption></figure>
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ds-buttons.jpg" width="1072" height="624" loading="lazy" alt="Primary button sizes and states"></div><figcaption><b>Buttons</b>Default, hover, press, focus, disabled</figcaption></figure>
-      <figure class="cs-fig"><div class="frame"><img src="/dynatax/assets/ds-metric-cards.jpg" width="1434" height="772" loading="lazy" alt="Metric card component variants"></div><figcaption><b>Metric cards</b>Two types with states</figcaption></figure>
-    </div>
-  <figure class="cs-fig cs-wide">
-    <div class="frame"><img src="/dynatax/assets/process-files.jpg" width="2000" height="805" loading="lazy" alt="Figma project folder with research, wireframe, settings, community, UI kit and brandbook files"></div>
-    <figcaption><b>How we worked</b>One Figma project with reLab: research, wireframes, the Settings and Community epics, UI Kit 2.0 and the brandbook.</figcaption>
+  <figure class="cs-fig ">
+    <div class="frame"><img src="/dynatax/assets/ds-colors.jpg" width="1452" height="892" loading="lazy" alt="Global color tokens in light and dark"></div>
+    <figcaption><b>Color</b>Global tokens, light and dark.</figcaption>
   </figure>
+  <figure class="cs-fig ">
+    <div class="frame"><img src="/dynatax/assets/ds-typography.jpg" width="1408" height="1174" loading="lazy" alt="Typography display styles with Inter"></div>
+    <figcaption><b>Type</b>Display scale in Inter.</figcaption>
+  </figure>
+  <figure class="cs-fig ">
+    <div class="frame"><img src="/dynatax/assets/ds-buttons.jpg" width="1072" height="624" loading="lazy" alt="Primary button component in default, hover, press, focus and disabled states"></div>
+    <figcaption><b>Buttons</b>Primary button, every size and state.</figcaption>
+  </figure>
+  <figure class="cs-fig ">
+    <div class="frame"><img src="/dynatax/assets/ds-metric-cards.jpg" width="1434" height="772" loading="lazy" alt="Metric card components in two types"></div>
+    <figcaption><b>Metric cards</b>Two card types for dashboards.</figcaption>
+  </figure>
+    </div>
   </section>
 
   <section class="cs-sec col">
-    <div class="num">10 · Impact</div>
+    <div class="num">09 · Impact</div>
     <h2>What changed</h2>
     <div class="cs-out">
-      <div><h3>Two clear homes</h3><p>Account and business settings now live at different entry points, so users know what a change affects.</p></div>
+      <div><h3>Clear mental model</h3><p>"Me" settings under the avatar, "my business" settings at the top right. No more guessing which level a setting belongs to.</p></div>
       <div><h3>Fewer blind spots</h3><p>Plan limits, missing entity data and verification surface before they block tax work.</p></div>
-      <div><h3>Ready to scale</h3><p>Industry segments and shared components let new business types plug in without a redesign.</p></div>
+      <div><h3>Ready to scale</h3><p>Industry-based layouts and reusable components let DynaTax add new segments without redesigning settings.</p></div>
     </div>
     <div class="cs-end"><a href="/">← Back to Works</a><a href="https://zalouxcase.figweb.site/" rel="noopener">Next: Zalo Community Marketplace ↗</a></div>
   </section>
