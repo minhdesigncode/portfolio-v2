@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DynaTax AI Settings Case Study</title>
+<meta name="description" content="Product design case study: Settings, Business Management and Billing for DynaTax AI, a US TaxTech startup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* DynaTax brand world: navy product chrome + teal logo mark, on cool paper */
+  --ink:#0f1a2b;
+  --muted:#5a6678;
+  --paper:#f4f6f8;
+  --surface:#ffffff;
+  --teal:#1aa39a;
+  --navy:#16213a;
+  --tint:#e3f2f0;
+  --line:#dde3ea;
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"DM Sans", "Segoe UI", system-ui, sans-serif;
+  /* layout: narrow text column, full-bleed image stages */
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;letter-spacing:-0.01em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.text{max-width:640px}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;padding:72px 0 0;overflow:hidden}
+.hero .eyebrow{color:#8fd9d2}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+.hero h1{font-size:clamp(40px,6vw,76px);line-height:1.02;font-weight:700;max-width:14ch}
+.hero .lede{color:#c6cfdd;font-size:19px;max-width:560px;margin:22px 0 0}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:48px 0 56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14)}
+.meta dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a96ab;margin-bottom:6px}
+.meta dd{margin:0;font-size:15px;color:#fff;line-height:1.45}
+.hero-shot{border-radius:16px 16px 0 0;box-shadow:0 -10px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.08);border-bottom:0}
+
+/* Sections */
+section{padding:96px 0}
+section + section{border-top:1px solid var(--line)}
+.num{font-family:var(--font-display);font-size:14px;color:var(--teal);font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1;font-weight:700;margin-bottom:18px}
+h3{font-size:20px;font-weight:700;margin-bottom:8px}
+p{margin:0 0 14px}
+.muted{color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card p{color:var(--muted);margin:0;font-size:16px}
+.card .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal);background:var(--tint);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+
+.stage{background:var(--tint);border-radius:20px;padding:clamp(16px,4vw,48px);margin-top:40px}
+.stage.dark{background:var(--navy)}
+.stage.white{background:var(--surface);border:1px solid var(--line)}
+.stage img{border-radius:10px;box-shadow:0 12px 40px rgba(15,26,43,.12);margin-inline:auto}
+.caption{display:flex;gap:12px;align-items:baseline;margin-top:16px;font-size:15px;color:var(--muted)}
+.caption b{color:var(--ink);font-weight:600;white-space:nowrap}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.split .stage{margin-top:0}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+
+.feature{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start;margin-top:72px}
+.feature:first-of-type{margin-top:40px}
+.feature .stage{margin-top:0}
+.feature-text{position:sticky;top:32px}
+.feature-text p{color:var(--muted);font-size:16px}
+.feature-text ul{padding-left:18px;margin:10px 0 0;color:var(--muted);font-size:15px}
+.feature-text li{margin-bottom:6px}
+
+.outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.outcome{border-top:3px solid var(--teal);padding-top:18px}
+.outcome h3{font-size:22px}
+.outcome p{color:var(--muted);font-size:16px}
+
+footer{background:var(--navy);color:#c6cfdd;padding:64px 0}
+footer h2{color:#fff}
+footer a{color:#8fd9d2;font-weight:600;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:900px){
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards,.outcomes{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr;gap:20px}
+  .feature-text{position:static}
+  section{padding:64px 0}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Case study · TaxTech SaaS · United States</p>
+    <h1>Settings that scale with every business you run</h1>
+    <p class="lede">Designing Account Settings, Business Management and Billing for DynaTax AI, an AI bookkeeping and tax workspace for small businesses and tax pros.</p>
+    <dl class="meta">
+      <div><dt>Client</dt><dd>DynaTax AI</dd></div>
+      <div><dt>Role</dt><dd>Product Designer (Freelance)</dd></div>
+      <div><dt>Team</dt><dd>With Relab product design team</dd></div>
+      <div><dt>Scope</dt><dd>Settings · Organizations · Billing · Verification</dd></div>
+    </dl>
+    <img class="hero-shot" src="assets/ui-business-management.jpg" width="2400" height="1551" alt="DynaTax Business Management screen listing three businesses with role, owner, members, industry and plan status">
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="num">01 — Overview</div>
+      <div class="text">
+        <h2>One login, many businesses</h2>
+        <p class="muted">DynaTax AI helps small business owners keep IRS-ready books and connect with verified tax pros. As users started running several businesses under one account, the settings area had to handle identity, entities, plans and billing without getting in the way of tax work.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Account Settings</span>
+        <span class="chip">Business Management</span>
+        <span class="chip">Billing &amp; Invoices</span>
+        <span class="chip">Account Verification</span>
+        <span class="chip">Notification Setup</span>
+        <span class="chip">Documents IA</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">02 — Challenge</div>
+      <h2>Where users got stuck</h2>
+      <div class="cards">
+        <div class="card"><span class="tag">Multi-entity</span><h3>Too many businesses</h3><p>Owners with an LLC, a 1099 side business and a trucking company had no clear way to switch, compare or set a default.</p></div>
+        <div class="card"><span class="tag">Billing</span><h3>Hidden plan limits</h3><p>Each business has its own plan. Users hit Free plan limits without warning, mid tax season.</p></div>
+        <div class="card"><span class="tag">Compliance</span><h3>Incomplete entity data</h3><p>Missing entity details or an unverified identity quietly blocked tax filing and deadline tracking.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">03 — Research</div>
+      <div class="text">
+        <h2>Benchmarking TaxDome</h2>
+        <p class="muted">I mapped TaxDome's settings structure against what DynaTax users actually need, then set a goal for each settings group before drawing any screen.</p>
+      </div>
+      <div class="stage white">
+        <img src="assets/ia-benchmark.jpg" width="2212" height="972" loading="lazy" alt="Side by side information architecture: DynaTax Tax Pro settings IA and TaxDome settings IA, with goal sticky notes above each group">
+      </div>
+      <div class="caption"><b>Benchmark</b><span>DynaTax Tax Pro settings (left) vs. TaxDome settings (right), with one goal per group.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">04 — Information Architecture</div>
+      <div class="text">
+        <h2>Eight groups, one clear home</h2>
+        <p class="muted">Profile, Organizations, Security, Notification, Verification, Business Profile, Billing and Community. Every setting a user looks for sits two clicks away from the avatar menu.</p>
+      </div>
+      <div class="stage white">
+        <img src="assets/ia-user-settings.jpg" width="2000" height="1841" loading="lazy" alt="Final User Setting information architecture tree with eight groups and their sub pages">
+      </div>
+      <div class="caption"><b>Final IA</b><span>User Settings tree. Organizations holds Create, Set up Entity and Billing per business.</span></div>
+
+      <div class="stage white">
+        <img src="assets/ia-documents.jpg" width="1482" height="1012" loading="lazy" alt="Documents information architecture, current version on the left and revised flatter version on the right">
+      </div>
+      <div class="caption"><b>Documents IA</b><span>Flattened nested folders into All Documents, Shared with me, My Upload, Trash and Folders. E-sign went from five statuses to To Sign and History.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">05 — Flows &amp; Wireframes</div>
+      <div class="text">
+        <h2>Organizations, end to end</h2>
+        <p class="muted">Wireframed every path from an organization card: manage plan, compare plans, view usage and invoices, or create a new organization.</p>
+      </div>
+      <div class="stage">
+        <img src="assets/wireframe-organizations.jpg" width="1446" height="1308" loading="lazy" alt="Wireframe flow connecting Organizations list, Available Plans, Subscription and Billing, and Create Organization modal">
+      </div>
+      <div class="caption"><b>Wireframe flow</b><span>Organizations → Available Plans → Subscription &amp; Billing → Create Organization.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">06 — Final Design</div>
+      <h2>Key screens</h2>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Settings from the avatar</h3>
+          <p>A slide-out account menu shows status at a glance before the user even opens a page.</p>
+          <ul><li>Business count under Business Management</li><li>"Not verified" status under Verification</li></ul>
+        </div>
+        <div class="stage dark"><img src="assets/ui-account-menu.jpg" width="2400" height="1775" loading="lazy" alt="Dashboard with account settings menu open, showing Personal Information, Business Management, Billing, Verification, Security and Notification"></div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Business Management</h3>
+          <p>Each business is a card with role, owner, members and industry. Problems show up inline, each with one fix.</p>
+          <ul><li>Plan limit warning → Upgrade Plan</li><li>Missing entity → Setup Entity</li><li>Filter by role, subscription, status</li></ul>
+        </div>
+        <div class="stage"><img src="assets/ui-business-management.jpg" width="2400" height="1551" loading="lazy" alt="Business Management page with plan limit and entity setup warnings on business cards"></div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Personal Information</h3>
+          <p>Verification lives next to the data it checks. Users verify email and phone in place instead of hunting for a separate flow.</p>
+          <ul><li>Inline "Verify now" per field</li><li>Tax info summary: SSN, filing status, dependents</li></ul>
+        </div>
+        <div class="stage"><img src="assets/ui-personal-info.jpg" width="2400" height="1551" loading="lazy" alt="Personal Information settings page with unverified email and phone badges and a verify account card"></div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Safe logout</h3>
+          <p>Logging out during a bank sync or AI report could lose data. A guard dialog makes waiting the default.</p>
+          <ul><li>Primary action: Wait &amp; Close</li><li>Secondary: Log out anyway</li></ul>
+        </div>
+        <div class="stage dark"><img src="assets/ui-logout-guard.jpg" width="2400" height="1775" loading="lazy" alt="Syncing in progress dialog warning that logging out will interrupt active tasks"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="num">07 — Impact</div>
+      <h2>What changed</h2>
+      <div class="outcomes">
+        <div class="outcome"><h3>Faster setup</h3><p>Streamlined creating businesses, setting up entities and choosing plans for multi-business owners.</p></div>
+        <div class="outcome"><h3>Fewer blind spots</h3><p>Plan limits, missing entity data and verification now surface before they block tax work.</p></div>
+        <div class="outcome"><h3>Reusable patterns</h3><p>Status cards, inline warnings and settings list rows were added to the shared design system with Relab.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="eyebrow">DynaTax AI · 2026</p>
+    <h2>Thanks for reading</h2>
+    <p style="margin-top:14px"><a href="../">← Back to all work</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
