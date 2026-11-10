@@ -46,6 +46,14 @@
 .pp .phone img{width:100%;height:auto;display:block;border-radius:22px}
 .pp .phone figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
 @media (max-width:760px){.pp .phones{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pp .protos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:16px auto 32px}
+.pp .proto{margin:0}
+.pp .proto-frame{border:1px solid var(--line);border-radius:18px;overflow:hidden;height:760px;background:#1e1e1e}
+.pp .proto-frame iframe{display:block;width:100%;height:100%;border:0}
+.pp .proto figcaption{text-align:center;font-size:13.5px;color:var(--muted);margin-top:10px}
+.pp .proto figcaption b{color:var(--ink);font-weight:600}
+.pp .proto figcaption a{text-decoration:underline}
+@media (max-width:760px){.pp .protos{grid-template-columns:1fr}.pp .proto-frame{height:640px}}
 .pp .notes{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
 .pp .notes li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15.5px;color:var(--muted)}
 .pp .notes li b{color:var(--ink);font-weight:600}
@@ -228,6 +236,17 @@
 
   <section class="cs-sec">
     <div class="col"><div class="num">10 · Prototype</div><h2>Key flows</h2><p>Sign in and sign up, adding a bank card by scanning or by hand, paying with a card, and adding an ID card or e-ticket. <a href="https://digitalwallet-minhnguyen.figweb.site/" rel="noopener" style="text-decoration:underline;color:var(--ink)">Try the live prototype ↗</a></p></div>
+    <div class="col"><h3 style="font-size:19px;font-weight:600;margin:40px 0 4px">Try it yourself</h3><p>Click through the live Figma prototypes below.</p></div>
+    <div class="protos cs-wide">
+      <figure class="proto">
+        <div class="proto-frame"><iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FyZHxmpabCKWCNVvw04dIeC%2FPocketPlus%3Fnode-id%3D905-3309%26p%3Df%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D94%253A47%26starting-point-node-id%3D905%253A3309" title="Sign in, sign up &amp; onboarding" loading="lazy" allowfullscreen></iframe></div>
+        <figcaption><b>Sign in, sign up &amp; onboarding</b> · <a href="https://www.figma.com/proto/yZHxmpabCKWCNVvw04dIeC/PocketPlus?node-id=905-3309&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=94%3A47&amp;starting-point-node-id=905%3A3309" rel="noopener">Open in Figma ↗</a></figcaption>
+      </figure>
+      <figure class="proto">
+        <div class="proto-frame"><iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FyZHxmpabCKWCNVvw04dIeC%2FPocketPlus%3Fnode-id%3D1055-6439%26p%3Df%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D713%253A1598%26starting-point-node-id%3D1055%253A6439" title="Add and use a bank card" loading="lazy" allowfullscreen></iframe></div>
+        <figcaption><b>Add and use a bank card</b> · <a href="https://www.figma.com/proto/yZHxmpabCKWCNVvw04dIeC/PocketPlus?node-id=1055-6439&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=713%3A1598&amp;starting-point-node-id=1055%3A6439" rel="noopener">Open in Figma ↗</a></figcaption>
+      </figure>
+    </div>
     <div class="phones cs-wide">
       <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-f9d4c9d01fefa62f9f448ff706a0ca0640f29d1d/w=552" loading="lazy" alt="Animated prototype: Sign in"><figcaption>Sign in</figcaption></figure>
       <figure class="phone"><img src="https://digitalwallet-minhnguyen.figweb.site/cdn-cgi/imagedelivery/s-dfVpmPR-aKHmwFNwAgnQ/digitalwallet-minhnguyen.figweb.site-70b56ad4d8e209bd8f54e9403528568b127667de/w=552" loading="lazy" alt="Animated prototype: Sign up"><figcaption>Sign up</figcaption></figure>
