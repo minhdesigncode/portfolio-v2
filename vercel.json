@@ -1,4 +1,6 @@
 {
+  "buildCommand": "echo 'redirect only, old site kept in the repo for history'",
+  "outputDirectory": "_redirect",
   "redirects": [
     { "source": "/:path*", "destination": "https://nora-des-portfolio.vercel.app/:path*", "permanent": false }
   ]
