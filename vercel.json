@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/:path*", "destination": "https://nora-des-portfolio.vercel.app/:path*", "permanent": false }
+  ]
+}
